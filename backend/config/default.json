@@ -1,0 +1,16 @@
+{
+    "serverConfig":{
+        "host":"localhost",
+        "port":3001
+    },
+    "pgConnectConfig": {
+        "user": "postgres",
+        "password": "root",
+        "database":"ITECH3108_30395583_a2",
+        "host":"localhost",
+        "port":5432,
+        "maxConnections":20,
+        "idleTimeoutMillis":30000,
+        "connectionTimeoutMillis":2000
+    }
+}

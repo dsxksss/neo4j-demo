@@ -1,0 +1,4 @@
+{
+    "jwtKey": "TEST_JWT_KEY",
+    "bcryptKey": "TEST_BCRYPT_KEY"
+}
