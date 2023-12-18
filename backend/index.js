@@ -23,8 +23,8 @@ figlet(`demo`,async function (err, data) {
         flags: "a",
     });
     app.use(cors());
+    app.use(express.static(path.join(__dirname, "static")));
     app.use(morgan("combined", { stream: logStream }));
-    app.use(multer().any());
 
     registerControllers(app);
 
