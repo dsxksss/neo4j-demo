@@ -20,7 +20,6 @@ const Img = {
     destination: (req, _file, callback) => {
         let { dirname } = req.params;
         dirname = decodeURIComponent(dirname)
-        console.log(dirname);
         const imagesDir = join(STATICPATH, dirname);
         if (!fs.existsSync(imagesDir)) fs.mkdirSync(imagesDir);
         callback(null, imagesDir);
@@ -39,7 +38,6 @@ const checkImagesUpload = upload({
     },
     //过滤文件设置
     fileFilter: (__req, file, cb) => {
-        console.log(file);
         // 只允许发送图像文件
         if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/)) {
             return cb(
@@ -78,7 +76,6 @@ router.get('/:dirname', async (req, res) => {
     try {
         let { dirname } = req.params;
         dirname = decodeURIComponent(dirname)
-        console.log(dirname);
         const imagesDir = join(STATICPATH, dirname);
 
         const files = fs.readdirSync(imagesDir);
