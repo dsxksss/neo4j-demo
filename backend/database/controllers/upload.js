@@ -49,45 +49,63 @@ const checkImagesUpload = upload({
     },
 }).array("images");
 
+const createSuccessResponse = (data, msg, code = 200) => {
+    return { success: true, data, msg, code };
+};
+
+const createErrorResponse = (msg, code = 400) => {
+    return { success: false, msg, code };
+};
+
 router.post('/:dirname', async (req, res) => {
-    checkImagesUpload(req, res, async function (err) {
-        if (err instanceof multer.MulterError) {
-            if (err.code === "LIMIT_FILE_COUNT") {
-                return res.status(400).send({ msg: "上传图片超过数量,最多只允许接收4张图片!" });
-            } else if (err.code === "LIMIT_FILE_SIZE") {
-                return res.status(400).send({ msg: `图片集大小不能超过50mb!` });
-            } else {
-                return res.status(400).send({ msg: `上传图片时发生错误! ${err.field}` });
+    try {
+        checkImagesUpload(req, res, async function (err) {
+            if (err instanceof multer.MulterError) {
+                if (err.code === "LIMIT_FILE_COUNT") {
+                    return res.status(400).json(createErrorResponse("上传图片超过数量,最多只允许接收4张图片!"));
+                } else if (err.code === "LIMIT_FILE_SIZE") {
+                    return res.status(400).json(createErrorResponse(`图片集大小不能超过50mb!`));
+                } else {
+                    return res.status(400).json(createErrorResponse(`上传图片时发生错误! ${err.field}`));
+                }
+            } else if (err) {
+                return res.status(400).json(createErrorResponse(`上传图片时发生其他错误! ${err}`));
             }
-        } else if (err) {
-            return res.status(400).send({ msg: `上传图片时发生其他错误! ${err}` });
-        }
 
-        if (req.files === undefined || req.files.length <= 0) {
-            return res.status(400).send({ msg: "不能上传空内容,请检查后重试!" });
-        }
+            if (req.files === undefined || req.files.length <= 0) {
+                return res.status(400).json(createErrorResponse("不能上传空内容,请检查后重试!"));
+            }
 
-
-        return res.status(200).send({ msg: "上传图片成功" });
-    });
+            return res.status(200).json(createSuccessResponse(null, "上传图片成功"));
+        });
+    } catch (error) {
+        res.status(500).json(createErrorResponse(`上传图片时发生未知错误: ${error.message}`, 500));
+    }
 });
 
 router.get('/:dirname', async (req, res) => {
     try {
-        let { dirname } = req.params;
-        dirname = decodeURIComponent(dirname)
+        const commonImageFormats = ['.jpg', '.jpeg', '.png', '.gif'];
+        const { dirname } = req.params;
         const imagesDir = join(STATICPATH, dirname);
 
         const files = fs.readdirSync(imagesDir);
         const images = files
+            .filter(file => {
+                const extension = path.extname(file).toLowerCase();
+                return commonImageFormats.includes(extension);
+            })
             .map(file => ({
-                name: file,
+                name: file.split('.')[0].split('--')[1],
+                fullName:file,
+                createdAt: file.split('--')[0],
                 url: `static/${dirname}/${file}`
-            }));
+            }))
+            .sort((a, b) => parseInt(b.createdAt) - parseInt(a.createdAt));
 
-        res.send({ data: images, msg: "获取目录图片成功" });
+        res.status(200).json(createSuccessResponse(images, "获取目录图片成功"));
     } catch (error) {
-        res.status(400).send({ msg: `获取目录图片失败:${error}` });
+        res.status(500).json(createErrorResponse(`获取目录图片失败: ${error.message}`, 500));
     }
 });
 
@@ -104,10 +122,89 @@ router.get('/', async (req, res) => {
             })
             .filter(image => image !== undefined);
 
-        res.send({ data: images, msg: "获取目录成功" });
+        res.status(200).json(createSuccessResponse(images, "获取目录成功"));
     } catch (error) {
-        res.status(400).send({ msg: `获取目录失败:${error}` });
+        res.status(500).json(createErrorResponse(`获取目录失败: ${error.message}`, 500));
     }
 });
+
+router.put('/:dirname/:filename', async (req, res) => {
+    try {
+        const { dirname, filename } = req.params;
+        const imagePath = join(STATICPATH, dirname, filename);
+        const { newName } = req.body;
+
+        if (!newName) {
+            return res.status(400).json(createErrorResponse("新文件名不能为空"));
+        }
+
+        const newImagePath = join(STATICPATH, dirname, `${newName}.${filename.split('.')[1]}`);
+
+        if (fs.existsSync(imagePath)) {
+            fs.renameSync(imagePath, newImagePath);
+            res.status(200).json(createSuccessResponse(null, "修改图片文件名成功"));
+        } else {
+            res.status(404).json(createErrorResponse("图片不存在", 404));
+        }
+    } catch (error) {
+        res.status(500).json(createErrorResponse(`修改图片文件名失败: ${error.message}`, 500));
+    }
+});
+
+router.put('/:dirname', async (req, res) => {
+    try {
+        const { dirname } = req.params;
+        const {newDirName} = req.body;
+
+        if (!newDirName) {
+            return res.status(400).json(createErrorResponse("新文件夹名不能为空"));
+        }
+
+        const oldFolderPath = join(STATICPATH, dirname);
+        const newFolderPath = join(STATICPATH, newDirName);
+
+        if (fs.existsSync(oldFolderPath)) {
+            fs.renameSync(oldFolderPath, newFolderPath);
+            res.status(200).json(createSuccessResponse(null, "修改文件夹名成功"));
+        } else {
+            res.status(404).json(createErrorResponse("文件夹不存在", 404));
+        }
+    } catch (error) {
+        res.status(500).json(createErrorResponse(`修改文件夹名失败: ${error.message}`, 500));
+    }
+});
+
+router.delete('/:dirname/:filename', async (req, res) => {
+    try {
+        const { dirname, filename } = req.params;
+        const imagePath = join(STATICPATH, dirname, filename);
+
+        if (fs.existsSync(imagePath)) {
+            fs.unlinkSync(imagePath);
+            res.status(200).json(createSuccessResponse(null, "删除图片成功"));
+        } else {
+            res.status(404).json(createErrorResponse("图片不存在", 404));
+        }
+    } catch (error) {
+        res.status(500).json(createErrorResponse(`删除图片失败: ${error.message}`, 500));
+    }
+});
+
+router.delete('/:dirname', async (req, res) => {
+    try {
+        const { dirname } = req.params;
+        const folderPath = join(STATICPATH, dirname);
+
+        if (fs.existsSync(folderPath)) {
+            fs.rmdirSync(folderPath, { recursive: true });
+            res.status(200).json(createSuccessResponse(null, "删除文件夹及图片成功"));
+        } else {
+            res.status(404).json(createErrorResponse("文件夹不存在", 404));
+        }
+    } catch (error) {
+        res.status(500).json(createErrorResponse(`删除文件夹及图片失败: ${error.message}`, 500));
+    }
+});
+
 
 module.exports = router;
