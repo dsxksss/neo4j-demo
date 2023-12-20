@@ -5,6 +5,7 @@ const express = require('express');
 const join = path.join
 const router = express.Router();
 const { STATICPATH } = require("../../staticPathProvider");
+const { DateTime } = require("luxon");
 
 const upload = ({ diskStorage, limits, fileFilter }) =>
     multer({
@@ -16,6 +17,16 @@ const upload = ({ diskStorage, limits, fileFilter }) =>
     });
 ;
 
+function getBeijingTimestamp() {
+    // 获取当前时间的 DateTime 对象
+    const now = DateTime.now().setZone("Asia/Shanghai");
+
+    // 获取调整后的北京时间的时间戳
+    const beijingTimestamp = now.toMillis();
+
+    return beijingTimestamp;
+}
+
 const Img = {
     destination: (req, _file, callback) => {
         let { dirname } = req.params;
@@ -25,7 +36,8 @@ const Img = {
         callback(null, imagesDir);
     },
     filename: (_req, file, callback) => {
-        callback(null, `${Date.now()}--${file.originalname}`);
+
+        callback(null, `${getBeijingTimestamp()}--${file.originalname}`);
     },
 };
 

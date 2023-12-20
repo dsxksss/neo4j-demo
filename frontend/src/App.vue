@@ -7,7 +7,7 @@ useToast().error("进入")
 </script>
 
 <template>
-  <n-tabs class="h-[90vh] m-[20px]" type="segment" animated>
+  <n-tabs class="h-[90vh]" type="segment" animated>
     <n-tab-pane class="contentCenter" name="chap1" tab="知识图谱">
       <KnowledgeGraph></KnowledgeGraph>
     </n-tab-pane>

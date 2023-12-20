@@ -1,7 +1,6 @@
 const express = require('express');
 const config = require('config');
 const chalk = require('chalk');
-const multer = require('multer');
 const checkCofing = require("./utils/checkConfig")
 const morgan = require('morgan');
 const figlet = require('figlet');
@@ -19,14 +18,15 @@ figlet(`demo`,async function (err, data) {
     }
     console.log(chalk.yellowBright(data));
     checkCofing();
+    
+    app.use(express.json())
+    app.use(cors());
+    app.use('/static',express.static(path.join(__dirname, "static")));
     const logStream = fs.createWriteStream(path.join(__dirname, "demo_backend.log"), {
         flags: "a",
     });
-    app.use(cors());
-    app.use(express.json())
-    app.use(express.static(path.join(__dirname, "static")));
     app.use(morgan("combined", { stream: logStream }));
-
+    
     registerControllers(app);
 
     const serverConfigHost = config.get('serverConfig.host')
