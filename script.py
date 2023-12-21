@@ -1,3 +1,4 @@
+import ast
 import pandas as pd
 from neo4j import GraphDatabase
 from tqdm import tqdm
@@ -10,7 +11,10 @@ def get_clean_data(data):
     if pd.isna(data) or not data or data == "[]":
         return []
     else:
-        return eval(data)[0]
+        try:
+            return ast.literal_eval(data)[0]
+        except (SyntaxError, ValueError):
+            return []
 
 
 # 定义导入MP数据的函数
@@ -62,54 +66,59 @@ def main():
     if not driver.verify_authentication(auth=(username, password)):
         print("用户名密码错误,请关闭程序重试")
         return
+    while True:
+        options = {
+            file: [file, file.split("_")[0]]
+            for file in file_list
+            if file.endswith(".xlsx")
+        }
 
-    options = {
-        file: [file, file.split("_")[0]] for file in file_list if file.endswith(".xlsx")
-    }
+        selects = questionary.checkbox(
+            "请选择你要导入的文件(如非规定格式则为当前年份,上下键选择,空格确定):", options
+        ).ask()
 
-    selects = questionary.checkbox(
-        "请选择你要导入的文件(如非规定格式则为当前年份,上下键选择,空格确定):", options
-    ).ask()
+        for selected in selects:
+            year = (
+                options[selected][1]
+                if options[selected][1].isnumeric()
+                else time.localtime(time.time())[0]
+            )
 
-    for selected in selects:
-        year = (
-            options[selected][1]
-            if options[selected][1].isnumeric()
-            else time.localtime(time.time())[0]
-        )
+            # 读取Excel文件
+            xlsx_path = f"{WORKPATH}/待导入文件目录/{options[selected][0]}"  # 你的Excel文件路径
+            df = pd.read_excel(xlsx_path, usecols=[12, 15, 17])  # 读取特定的列
 
-        # 读取Excel文件
-        xlsx_path = f"{WORKPATH}/待导入文件目录/{options[selected][0]}"  # 你的Excel文件路径
-        df = pd.read_excel(xlsx_path, usecols=[12, 15, 17])  # 读取特定的列
+            print(f"按ctrl+c即可中断程序,{selected}导入中...")
+            # 使用tqdm显示进度条
+            for _, row in tqdm(df.iterrows(), total=df.shape[0]):
+                data1 = get_clean_data(row.iloc[0])
+                data2 = get_clean_data(row.iloc[1])
+                data3 = get_clean_data(row.iloc[2])
 
-        print(f"按ctrl+c即可中断程序,{selected}导入中...")
-        # 使用tqdm显示进度条
-        for _, row in tqdm(df.iterrows(), total=df.shape[0]):
-            data1 = get_clean_data(row.iloc[0])
-            data2 = get_clean_data(row.iloc[1])
-            data3 = get_clean_data(row.iloc[2])
+                with driver.session() as session:
+                    if selected_database == "MP":
+                        if data1 and len(data1) == 3:
+                            session.execute_write(
+                                import_MP_data, data1[0], data1[1], data1[2], year
+                            )
+                        if data2 and len(data2) == 3:
+                            session.execute_write(
+                                import_MP_data, data2[0], data2[1], data2[2], year
+                            )
 
-            with driver.session() as session:
-                if selected_database == "MP":
-                    if data1 and len(data1) == 3:
-                        session.execute_write(
-                            import_MP_data, data1[0], data1[1], data1[2], year
-                        )
-                    if data2 and len(data2) == 3:
-                        session.execute_write(
-                            import_MP_data, data2[0], data2[1], data2[2], year
-                        )
-
-                    if data3 and len(data3) == 3:
-                        session.execute_write(
-                            import_MP_data, data3[0], data3[1], data3[2], year
-                        )
-                else:
-                    if data3 and len(data3) == 3:
-                        session.execute_write(
-                            import_R_data, data3[0], data3[1], data3[2], year
-                        )
-        print(f"\033[32m{selected}导入完成\033[0m")
+                        if data3 and len(data3) == 3:
+                            session.execute_write(
+                                import_MP_data, data3[0], data3[1], data3[2], year
+                            )
+                    else:
+                        if data3 and len(data3) == 3:
+                            session.execute_write(
+                                import_R_data, data3[0], data3[1], data3[2], year
+                            )
+            print(f"\033[32m{selected}导入完成\033[0m")
+        y_n = questionary.confirm(f"请问你是否需要继续选择文件导入至{selected_database}数据库(Y:确定,N:关闭程序并取消)").ask()
+        if not y_n:
+            break
 
     # 关闭数据库连接
     driver.close()
