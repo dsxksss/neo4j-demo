@@ -3,9 +3,9 @@ import axios from 'axios';
 const BASE_URL = 'http://localhost:3001/upload'; // Replace with your actual backend API URL
 
 // Function to upload images
-const uploadImages = async (dirname, formData) => {
+const uploadImages = async (pname,dirname, formData) => {
     try {
-        const response = await axios.post(`${BASE_URL}/${dirname}`, formData, {
+        const response = await axios.post(`${BASE_URL}/${pname}/${dirname}`, formData, {
             headers: { 'Content-Type': 'multipart/form-data' },
         });
         return response.data;
@@ -15,9 +15,9 @@ const uploadImages = async (dirname, formData) => {
 };
 
 // Function to get images in a directory
-const getImages = async (dirname) => {
+const getImages = async (pname,dirname) => {
     try {
-        const response = await axios.get(`${BASE_URL}/${dirname}`);
+        const response = await axios.get(`${BASE_URL}/${pname}/${dirname}`);
         return response.data;
     } catch (error) {
         throw error.response.data;
@@ -25,9 +25,9 @@ const getImages = async (dirname) => {
 };
 
 // Function to get all directories
-const getAllDirectories = async () => {
+const getAllDirectories = async (pname) => {
     try {
-        const response = await axios.get(BASE_URL);
+        const response = await axios.get(`${BASE_URL}/${pname}`);
         return response.data;
     } catch (error) {
         throw error;
@@ -35,9 +35,9 @@ const getAllDirectories = async () => {
 };
 
 // Function to rename an image
-const renameImage = async (dirname, filename, newName) => {
+const renameImage = async (pname,dirname, filename, newName) => {
     try {
-        const response = await axios.put(`${BASE_URL}/${dirname}/${filename}`, { newName });
+        const response = await axios.put(`${BASE_URL}/${pname}/${dirname}/${filename}`, { newName });
         return response.data;
     } catch (error) {
         throw error.response.data;
@@ -45,9 +45,9 @@ const renameImage = async (dirname, filename, newName) => {
 };
 
 // Function to rename a directory
-const renameDirectory = async (dirname, newDirName) => {
+const renameDirectory = async (pname,dirname, newDirName) => {
     try {
-        const response = await axios.put(`${BASE_URL}/${dirname}`, { newDirName });
+        const response = await axios.put(`${BASE_URL}/${pname}/${dirname}`, { newDirName });
         return response.data;
     } catch (error) {
         throw error.response.data;
@@ -55,9 +55,9 @@ const renameDirectory = async (dirname, newDirName) => {
 };
 
 // Function to delete an image
-const deleteImage = async (dirname, filename) => {
+const deleteImage = async (pname,dirname, filename) => {
     try {
-        const response = await axios.delete(`${BASE_URL}/${dirname}/${filename}`);
+        const response = await axios.delete(`${BASE_URL}/${pname}/${dirname}/${filename}`);
         return response.data;
     } catch (error) {
         throw error.response.data;
@@ -65,9 +65,9 @@ const deleteImage = async (dirname, filename) => {
 };
 
 // Function to delete a directory
-const deleteDirectory = async (dirname) => {
+const deleteDirectory = async (pname,dirname) => {
     try {
-        const response = await axios.delete(`${BASE_URL}/${dirname}`);
+        const response = await axios.delete(`${BASE_URL}/${pname}/${dirname}`);
         return response.data;
     } catch (error) {
         throw error.response.data;

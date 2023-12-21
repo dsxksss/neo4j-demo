@@ -1,213 +1,53 @@
 <script setup>
 import { ref, onMounted } from "vue";
+import { getAllDirectories, getImages } from "../api"
+import { useToast } from "vue-toastification";
+import { extractDateTime } from "../utils/extractDateTime"
 
 const placement = ref("left");
 const type = ref("card");
+const dirs = ref([])
+const images = ref([])
+const toast = useToast()
+
+onMounted(async () => {
+    const result = await getAllDirectories("知识图谱")
+    if (result.success) {
+        dirs.value = result.data;
+    } else {
+        toast.error(result.message);
+    }
+});
+
+async function handleClickTabpane(dirname) {
+    const result = await getImages("知识图谱", dirname)
+    if (result.success) {
+        images.value = result.data;
+    } else {
+        toast.error(result.message);
+    }
+}
 
 </script>
 
 <template>
-    <n-tabs class="pane-wrapper" size="large" :key="type + placement" type="card" animated placement="left">
-        <n-tab-pane name="2022" tab="2022">
-            <n-grid :x-gap="0" :y-gap="50" :cols="3">
-                <n-grid-item>
-
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://cdn2.axureshop.com/wp-content/uploads/2021/04/14282-230002856404.png" />
+    <n-tabs @update:value="handleClickTabpane" class="" size="large" :key="type + placement" type="card" animated
+        placement="left">
+        <n-tab-pane v-for="dir of dirs" class="overflow-y-scroll" :name="dir" :tab="dir">
+            <n-grid :x-gap="0" :y-gap="20" :cols="4">
+                <n-grid-item v-for="image of images" :key="image.fullName">
+                    <div class=" relative w-[400px] h-[200px]">
+                        <n-image open="true" v-show="true" class="bg-cover group" height="200"
+                            :src="`http://localhost:3001/${image.url}`">
+                            <div
+                                class="z-10 duration-200 transition-all w-[400px] h-[200px] opacity-0 hover:opacity-100 hover:bg-black/50 text-white absolute bottom-0 left-0">
+                                <div class="absolute bottom-0 left-0">
+                                    <div>{{ image.name }}</div>
+                                    <div>{{ extractDateTime(image.createdAt) }}</div>
+                                </div>
+                            </div>
+                        </n-image>
                     </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://cdn2.axureshop.com/wp-content/uploads/2021/04/14282-230002856404.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://cdn2.axureshop.com/wp-content/uploads/2021/04/14282-230002856404.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://cdn2.axureshop.com/wp-content/uploads/2021/04/14282-230002856404.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://cdn2.axureshop.com/wp-content/uploads/2021/04/14282-230002856404.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://cdn2.axureshop.com/wp-content/uploads/2021/04/14282-230002856404.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-            </n-grid>
-        </n-tab-pane>
-        <n-tab-pane name="2021" tab="2021">
-            <n-grid :x-gap="0" :y-gap="50" :cols="3">
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://www.omegaxyz.com/wp-content/uploads/2020/08/LinuxOps.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://www.omegaxyz.com/wp-content/uploads/2020/08/LinuxOps.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://www.omegaxyz.com/wp-content/uploads/2020/08/LinuxOps.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://www.omegaxyz.com/wp-content/uploads/2020/08/LinuxOps.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://www.omegaxyz.com/wp-content/uploads/2020/08/LinuxOps.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://www.omegaxyz.com/wp-content/uploads/2020/08/LinuxOps.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-            </n-grid>
-        </n-tab-pane>
-        <n-tab-pane name="2020" tab="2020">
-            <n-grid :x-gap="0" :y-gap="50" :cols="3">
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://5b0988e595225.cdn.sohucs.com/images/20180223/b17052646aa0400484b7169791f41114.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://5b0988e595225.cdn.sohucs.com/images/20180223/b17052646aa0400484b7169791f41114.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://5b0988e595225.cdn.sohucs.com/images/20180223/b17052646aa0400484b7169791f41114.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://5b0988e595225.cdn.sohucs.com/images/20180223/b17052646aa0400484b7169791f41114.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://5b0988e595225.cdn.sohucs.com/images/20180223/b17052646aa0400484b7169791f41114.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://5b0988e595225.cdn.sohucs.com/images/20180223/b17052646aa0400484b7169791f41114.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-                </n-grid-item>
-            </n-grid>
-        </n-tab-pane>
-        <n-tab-pane name="2019" tab="2019">
-            <n-grid :x-gap="0" :y-gap="50" :cols="3">
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://www.omegaxyz.com/wp-content/uploads/2020/07/aminer-kg.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://www.omegaxyz.com/wp-content/uploads/2020/07/aminer-kg.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://www.omegaxyz.com/wp-content/uploads/2020/07/aminer-kg.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://www.omegaxyz.com/wp-content/uploads/2020/07/aminer-kg.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://www.omegaxyz.com/wp-content/uploads/2020/07/aminer-kg.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
-                </n-grid-item>
-                <n-grid-item>
-                    <div>
-                        <n-image width="320" height="200"
-                            src="https://www.omegaxyz.com/wp-content/uploads/2020/07/aminer-kg.png" />
-                    </div>
-                    <span>2023-11-24 11:29 xxx图</span>
-
                 </n-grid-item>
             </n-grid>
         </n-tab-pane>
@@ -215,11 +55,6 @@ const type = ref("card");
 </template>
 
 <style scoped>
-.pane-wrapper {
-    height: 90vh;
-
-}
-
 image {
     object-fit: cover;
 }

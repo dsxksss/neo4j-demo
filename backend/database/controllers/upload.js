@@ -29,9 +29,10 @@ function getBeijingTimestamp() {
 
 const Img = {
     destination: (req, _file, callback) => {
-        let { dirname } = req.params;
-        dirname = decodeURIComponent(dirname)
-        const imagesDir = join(STATICPATH, dirname);
+        let { pname, dirname } = req.params;
+        const pdirDir = join(STATICPATH, pname);
+        const imagesDir = join(STATICPATH, pname, dirname);
+        if (!fs.existsSync(pdirDir)) fs.mkdirSync(pdirDir);
         if (!fs.existsSync(imagesDir)) fs.mkdirSync(imagesDir);
         callback(null, imagesDir);
     },
@@ -69,7 +70,7 @@ const createErrorResponse = (msg, code = 400) => {
     return { success: false, msg, code };
 };
 
-router.post('/:dirname', async (req, res) => {
+router.post('/:pname/:dirname', async (req, res) => {
     try {
         checkImagesUpload(req, res, async function (err) {
             if (err instanceof multer.MulterError) {
@@ -95,11 +96,11 @@ router.post('/:dirname', async (req, res) => {
     }
 });
 
-router.get('/:dirname', async (req, res) => {
+router.get('/:pname/:dirname', async (req, res) => {
     try {
         const commonImageFormats = ['.jpg', '.jpeg', '.png', '.gif'];
-        const { dirname } = req.params;
-        const imagesDir = join(STATICPATH, dirname);
+        const { dirname, pname } = req.params;
+        const imagesDir = join(STATICPATH, pname, dirname);
 
         const files = fs.readdirSync(imagesDir);
         const images = files
@@ -109,9 +110,9 @@ router.get('/:dirname', async (req, res) => {
             })
             .map(file => ({
                 name: file.split('.')[0].split('--')[1],
-                fullName:file,
+                fullName: file,
                 createdAt: file.split('--')[0],
-                url: `static/${dirname}/${file}`
+                url: `static/${pname}/${dirname}/${file}`
             }))
             .sort((a, b) => parseInt(b.createdAt) - parseInt(a.createdAt));
 
@@ -121,9 +122,10 @@ router.get('/:dirname', async (req, res) => {
     }
 });
 
-router.get('/', async (req, res) => {
+router.get('/:pname', async (req, res) => {
     try {
-        const imagesDir = STATICPATH;
+        const { pname } = req.params;
+        const imagesDir = join(STATICPATH, pname);
         const files = fs.readdirSync(imagesDir);
 
         const images = files
@@ -140,17 +142,17 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.put('/:dirname/:filename', async (req, res) => {
+router.put('/:pname/:dirname/:filename', async (req, res) => {
     try {
-        const { dirname, filename } = req.params;
-        const imagePath = join(STATICPATH, dirname, filename);
+        const { pname, dirname, filename } = req.params;
+        const imagePath = join(STATICPATH, pname, dirname, filename);
         const { newName } = req.body;
 
         if (!newName) {
             return res.status(400).json(createErrorResponse("新文件名不能为空"));
         }
 
-        const newImagePath = join(STATICPATH, dirname, `${newName}.${filename.split('.')[1]}`);
+        const newImagePath = join(STATICPATH, pname, dirname, `${newName}.${filename.split('.')[1]}`);
 
         if (fs.existsSync(imagePath)) {
             fs.renameSync(imagePath, newImagePath);
@@ -163,17 +165,17 @@ router.put('/:dirname/:filename', async (req, res) => {
     }
 });
 
-router.put('/:dirname', async (req, res) => {
+router.put('/:pname/:dirname', async (req, res) => {
     try {
-        const { dirname } = req.params;
-        const {newDirName} = req.body;
+        const { pname, dirname } = req.params;
+        const { newDirName } = req.body;
 
         if (!newDirName) {
             return res.status(400).json(createErrorResponse("新文件夹名不能为空"));
         }
 
-        const oldFolderPath = join(STATICPATH, dirname);
-        const newFolderPath = join(STATICPATH, newDirName);
+        const oldFolderPath = join(STATICPATH, pname, dirname);
+        const newFolderPath = join(STATICPATH, pname, newDirName);
 
         if (fs.existsSync(oldFolderPath)) {
             fs.renameSync(oldFolderPath, newFolderPath);
@@ -186,10 +188,10 @@ router.put('/:dirname', async (req, res) => {
     }
 });
 
-router.delete('/:dirname/:filename', async (req, res) => {
+router.delete('/:pname/:dirname/:filename', async (req, res) => {
     try {
-        const { dirname, filename } = req.params;
-        const imagePath = join(STATICPATH, dirname, filename);
+        const { pname, dirname, filename } = req.params;
+        const imagePath = join(STATICPATH, pname, dirname, filename);
 
         if (fs.existsSync(imagePath)) {
             fs.unlinkSync(imagePath);
@@ -202,10 +204,10 @@ router.delete('/:dirname/:filename', async (req, res) => {
     }
 });
 
-router.delete('/:dirname', async (req, res) => {
+router.delete('/:pname/:dirname', async (req, res) => {
     try {
-        const { dirname } = req.params;
-        const folderPath = join(STATICPATH, dirname);
+        const { pname, dirname } = req.params;
+        const folderPath = join(STATICPATH, pname, dirname);
 
         if (fs.existsSync(folderPath)) {
             fs.rmdirSync(folderPath, { recursive: true });
