@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import naive from 'naive-ui'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 import Toast, { POSITION } from "vue-toastification";
 import './index.css'
 import "vue-toastification/dist/index.css";
@@ -15,6 +16,6 @@ const options = {
 };
 
 createApp(App)
-    .use(naive)
+    .use(ElementPlus)
     .use(Toast, options)
     .mount('#app')

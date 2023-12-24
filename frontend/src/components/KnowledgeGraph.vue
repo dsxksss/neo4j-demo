@@ -4,8 +4,6 @@ import { getAllDirectories, getImages } from "../api"
 import { useToast } from "vue-toastification";
 import { extractDateTime } from "../utils/extractDateTime"
 
-const placement = ref("left");
-const type = ref("card");
 const dirs = ref([])
 const images = ref([])
 const toast = useToast()
@@ -14,13 +12,14 @@ onMounted(async () => {
     const result = await getAllDirectories("知识图谱")
     if (result.success) {
         dirs.value = result.data;
+        handleClickTabpane(dirs.value[0])
     } else {
         toast.error(result.message);
     }
 });
 
-async function handleClickTabpane(dirname) {
-    const result = await getImages("知识图谱", dirname)
+async function handleClickTabpane(name, _ = null) {
+    const result = await getImages("知识图谱", name)
     if (result.success) {
         images.value = result.data;
     } else {
@@ -31,31 +30,24 @@ async function handleClickTabpane(dirname) {
 </script>
 
 <template>
-    <n-tabs @update:value="handleClickTabpane" class="" size="large" :key="type + placement" type="card" animated
-        placement="left">
-        <n-tab-pane v-for="dir of dirs" class="overflow-y-scroll" :name="dir" :tab="dir">
-            <n-grid :x-gap="0" :y-gap="20" :cols="4">
-                <n-grid-item v-for="image of images" :key="image.fullName">
-                    <div class=" relative w-[400px] h-[200px]">
-                        <n-image open="true" v-show="true" class="bg-cover group" height="200"
-                            :src="`http://localhost:3001/${image.url}`">
-                            <div
-                                class="z-10 duration-200 transition-all w-[400px] h-[200px] opacity-0 hover:opacity-100 hover:bg-black/50 text-white absolute bottom-0 left-0">
-                                <div class="absolute bottom-0 left-0">
-                                    <div>{{ image.name }}</div>
-                                    <div>{{ extractDateTime(image.createdAt) }}</div>
-                                </div>
-                            </div>
-                        </n-image>
-                    </div>
-                </n-grid-item>
-            </n-grid>
-        </n-tab-pane>
-    </n-tabs>
-</template>
+    <el-tab-pane label="知识图谱" name="知识图谱">
+        <el-tabs tab-position="left" class="" @tab-click="(tab, _) => handleClickTabpane(tab.props.label)">
+            <el-tab-pane v-for="dir of dirs" :label="dir" class="h-[80vh] overflow-y-scroll">
+                <el-space class="m-5" :size="50" wrap>
+                    <div v-for="image of images" class=" relative w-[350px] h-[200px]">
+                        <el-image preview-teleported  :key="image.fullName"
+                            :src="`http://localhost:3001/${image.url}`" class="w-[350px] h-[200px]" :zoom-rate="1.2"
+                            :max-scale="7" :preview-src-list="[`http://localhost:3001/${image.url}`]" :min-scale="0.2"
+                            fit="cover">
+                        </el-image>
+                       
+                        <el-tag :key="image.fullName" type="" class="mx-1 w-[200px] text-ellipsis overflow-hidden absolute bottom-2 left-1" effect="dark"
+                            round>{{ image.name }}
+                        </el-tag>
 
-<style scoped>
-image {
-    object-fit: cover;
-}
-</style>
+                    </div>
+                </el-space>
+            </el-tab-pane>
+        </el-tabs>
+    </el-tab-pane>
+</template>
