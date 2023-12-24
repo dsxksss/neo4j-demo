@@ -1,4 +1,3 @@
-import ast
 import pandas as pd
 from neo4j import GraphDatabase
 from tqdm import tqdm
@@ -46,10 +45,8 @@ def main():
     # 连接到Neo4j数据库
     uri = "bolt://localhost:7687"  # 你的Neo4j数据库URI
 
-    username = "neo4j"  # 您的Neo4j用户名
-    password = "12345678"  # 您的Neo4j密码
-    # username = input("请输入您的数据库用户名: ")  # 您的Neo4j用户名
-    # password = input("请输入您的数据库密码: ")  # 您的Neo4j密码
+    username = input("请输入您的数据库用户名: ")  # 您的Neo4j用户名
+    password = input("请输入您的数据库密码: ")  # 您的Neo4j密码
 
     driver = GraphDatabase.driver(uri, auth=(username, password))
     if not driver.verify_authentication(auth=(username, password)):
