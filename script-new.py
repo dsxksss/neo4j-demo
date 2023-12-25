@@ -66,7 +66,7 @@ def main():
         for selected in selects:
             # 读取Excel文件
             xlsx_path = f"{WORKPATH}/待导入文件目录/{options[selected][0]}"  # 你的Excel文件路径
-            df = pd.read_excel(xlsx_path, dtype=str)  # 读取特定的列
+            df = pd.read_excel(xlsx_path)  # 读取特定的列
 
             print(f"按ctrl+c即可中断程序,{selected}导入中...")
             # 使用tqdm显示进度条
