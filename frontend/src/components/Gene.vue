@@ -9,7 +9,7 @@ const images = ref([])
 const toast = useToast()
 
 onMounted(async () => {
-    const result = await getAllDirectories("趋势图")
+    const result = await getAllDirectories("Gene")
     if (result.success) {
         dirs.value = result.data;
         handleClickTabpane(dirs.value[0])
@@ -19,7 +19,7 @@ onMounted(async () => {
 });
 
 async function handleClickTabpane(name, _ = null) {
-    const result = await getImages("趋势图", name)
+    const result = await getImages("Gene", name)
     if (result.success) {
         images.value = result.data;
     } else {
@@ -30,10 +30,10 @@ async function handleClickTabpane(name, _ = null) {
 </script>
 
 <template>
-    <el-tab-pane label="趋势图" name="趋势图">
+    <el-tab-pane label="Gene" name="Gene">
         <el-tabs tab-position="left" class="" @tab-click="(tab, _) => handleClickTabpane(tab.props.label)">
-            <el-tab-pane v-for="dir of dirs" :label="dir" class="h-[80vh] overflow-y-scroll">
-                <el-space class="m-5" :size="50" wrap>
+            <el-tab-pane v-for="dir of dirs" :label="dir" class="h-[80vh] overflow-y-auto">
+                <el-space class="m-10" :size="50" wrap>
                     <div v-for="image of images" class=" relative w-[350px] h-[200px]">
                         <el-image preview-teleported :key="image.fullName" :src="`http://localhost:3001/${image.url}`"
                             class="w-[350px] h-[200px]" :zoom-rate="1.2" :max-scale="7"

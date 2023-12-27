@@ -1,23 +1,16 @@
 <script setup>
 import KnowledgeGraph from '../components/KnowledgeGraph.vue';
-import TrendChart from '../components/TrendChart.vue';
+import HotTrendGraph from '../components/HotTrendGraph.vue';
 import { useToast } from 'vue-toastification';
 import { ref } from "vue"
-const seleted = ref("知识图谱")
+const seleted = ref("KnowledgeGraph")
 
 useToast().error("进入")
 </script>
 
 <template>
-    <el-tabs v-model="seleted" type="border-card" class="contentCenter" stretch @tab-click="handleClick">
+    <el-tabs v-model="seleted" type="border-card" class="p-0" stretch>
         <KnowledgeGraph></KnowledgeGraph>
-        <TrendChart></TrendChart>
+        <HotTrendGraph></HotTrendGraph>
     </el-tabs>
 </template>
-
-
-<style scoped>
-.contentCenter {
-    @apply flex-col h-[90vh] w-screen justify-center items-center;
-}
-</style>
