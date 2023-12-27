@@ -9,12 +9,12 @@ import bg from "/bg.jpg";
             <p class="text-white text-[2rem]"> 阿尔兹海默症知识图谱构建及知识发现
             </p>
         </div>
-        <div class="bottom-[22%] left-[46.6%] w-[100px] h-[100px] rounded-full flex justify-center items-center bg-gradient-to-b font-bold from-[#d0dfc8] to-[#99a9e4] relative">
-            <router-link to="/graph" class="text-center text-base text-white">
+        <router-link to="/graph" class="bottom-[22%] left-[46.6%] w-[100px] h-[100px] rounded-full flex justify-center items-center bg-gradient-to-b from-[#d0dfc8] to-[#99a9e4] transition ease-in-out duration-200 hover:shadow-md hover:-translate-y-1 hover:scale-110 font-bold relative">
+            <p  class="text-center text-base text-white">
                 To<br>
                 Explore
-            </router-link>
-        </div>
+            </p>
+        </router-link>
     </div>
 </template>
 
