@@ -14,7 +14,8 @@
     "jwt-decode": "^4.0.0",
     "luxon": "^3.4.4",
     "vue": "^3.3.8",
-    "vue-toastification": "^2.0.0-rc.5"
+    "vue-toastification": "^2.0.0-rc.5",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@vicons/ionicons5": "^0.12.0",

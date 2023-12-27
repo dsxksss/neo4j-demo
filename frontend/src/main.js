@@ -5,6 +5,7 @@ import 'element-plus/dist/index.css'
 import Toast, { POSITION } from "vue-toastification";
 import './index.css'
 import "vue-toastification/dist/index.css";
+import router from "./router.js"
 
 const options = {
     transition: "Vue-Toastification__bounce",
@@ -16,6 +17,7 @@ const options = {
 };
 
 createApp(App)
+    .use(router)
     .use(ElementPlus)
     .use(Toast, options)
     .mount('#app')
