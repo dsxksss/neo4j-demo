@@ -37,8 +37,7 @@ const Img = {
         callback(null, imagesDir);
     },
     filename: (_req, file, callback) => {
-
-        callback(null, `${getBeijingTimestamp()}--${file.originalname}`);
+        callback(null, file.originalname);
     },
 };
 
@@ -46,13 +45,13 @@ const checkImagesUpload = upload({
     diskStorage: Img,
     //文件大小设置
     limits: {
-        files: 4, // 最多允许发送20个文件,
+        files: 20, // 最多允许发送20个文件,
         fileSize: 300 * 1024 * 1024, //300mb限制
     },
     //过滤文件设置
     fileFilter: (__req, file, cb) => {
         // 只允许发送图像文件
-        if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/)) {
+        if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
             return cb(
                 new multer.MulterError("LIMIT_UNEXPECTED_FILE", "只接收图片文件!!!"),
                 false,
@@ -98,7 +97,7 @@ router.post('/:pname/:dirname', async (req, res) => {
 
 router.get('/:pname/:dirname', async (req, res) => {
     try {
-        const commonImageFormats = ['.jpg', '.jpeg', '.png', '.gif'];
+        const commonImageFormats = ['.jpg', '.jpeg', '.png'];
         const { dirname, pname } = req.params;
         const imagesDir = join(STATICPATH, pname, dirname);
 
@@ -109,12 +108,10 @@ router.get('/:pname/:dirname', async (req, res) => {
                 return commonImageFormats.includes(extension);
             })
             .map(file => ({
-                name: file.split('.')[0].split('--')[1],
+                name: file.split('.')[0],
                 fullName: file,
-                createdAt: file.split('--')[0],
                 url: `static/${pname}/${dirname}/${file}`
-            }))
-            .sort((a, b) => parseInt(b.createdAt) - parseInt(a.createdAt));
+            }));
 
         res.status(200).json(createSuccessResponse(images, "获取目录图片成功"));
     } catch (error) {
