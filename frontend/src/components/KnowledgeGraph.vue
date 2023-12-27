@@ -8,13 +8,9 @@ const seleted = ref("Article")
 
 <template>
     <el-tab-pane label="KnowledgeGraph" name="KnowledgeGraph">
-        <el-tabs v-model="seleted" stretch>
+        <el-tabs v-model="seleted" class="p-0" type="card" stretch>
             <Article></Article>
             <Gene></Gene>
         </el-tabs>
     </el-tab-pane>
 </template>
-
-
-<style scoped>
-</style>
