@@ -49,7 +49,7 @@ async function handleClickTabpane(name, _ = null) {
             <el-col :span="22">
                 <div class="snap-y w-full h-[80vh] overflow-y-auto space-y-10 shadow-lg">
                     <el-image v-for="image of images" preview-teleported :key="image.fullName"
-                        :src="`http://localhost:3001/${image.url}`" class="snap-center w-full h-[80vh] overflow-y-auto" :zoom-rate="1.2"
+                        :src="`http://localhost:3001/${image.url}`" class="snap-start w-full h-[80vh] overflow-y-auto" :zoom-rate="1.2"
                         :max-scale="12" :preview-src-list="[`http://localhost:3001/${image.url}`]" :min-scale="0.1"
                         fit="cover">
                     </el-image>
