@@ -7,7 +7,7 @@ const seleted = ref("Article")
 </script>
 
 <template>
-    <el-tab-pane label="KnowledgeGraph" name="KnowledgeGraph">
+    <el-tab-pane label="Knowledge Graph" name="KnowledgeGraph">
         <el-tabs v-model="seleted" class="p-0" type="card" stretch>
             <Article></Article>
             <Gene></Gene>

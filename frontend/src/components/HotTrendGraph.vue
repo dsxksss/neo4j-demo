@@ -1,22 +1,16 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { getAllDirectories, getImages } from "../api"
+import { getImages } from "../api"
 import { useToast } from "vue-toastification";
 
 const defaultActive = ref("")
-const dirs = ref([])
+const dirs = ref(["DISEASE", "Chemicals and Drugs", "Differential co-expression"])
 const images = ref([])
 const toast = useToast()
 
 onMounted(async () => {
-    const result = await getAllDirectories("HotTrendGraph")
-    if (result.success) {
-        dirs.value = result.data;
-        defaultActive.value = dirs.value[0];
-        handleClickTabpane(dirs.value[0])
-    } else {
-        toast.error(result.message);
-    }
+    defaultActive.value = dirs.value[0];
+    handleClickTabpane(dirs.value[0])
 });
 
 async function handleClickTabpane(name, _ = null) {
@@ -31,7 +25,7 @@ async function handleClickTabpane(name, _ = null) {
 </script>
 
 <template>
-    <el-tab-pane label="HotTrendGraph" name="HotTrendGraph">
+    <el-tab-pane label="Hot Trend Graph" name="HotTrendGraph">
         <el-row class="tac">
             <el-col :span="4">
                 <el-menu :default-active="defaultActive" @select="(title, _, __, ___) => handleClickTabpane(title)"
@@ -45,8 +39,8 @@ async function handleClickTabpane(name, _ = null) {
             <el-col :span="20">
                 <el-scrollbar height="92vh">
                     <el-image v-for="image of images" preview-teleported :key="image.fullName"
-                        :src="`http://localhost:3001/${image.url}`" class="" :zoom-rate="1.2"
-                        :max-scale="12" :preview-src-list="[`http://localhost:3001/${image.url}`]" fit="cover">
+                        :src="`http://localhost:3001/${image.url}`" class="" :zoom-rate="1.2" :max-scale="12"
+                        :preview-src-list="[`http://localhost:3001/${image.url}`]" fit="cover">
                     </el-image>
                 </el-scrollbar>
             </el-col>

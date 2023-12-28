@@ -1,22 +1,16 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { getAllDirectories, getImages } from "../api"
+import { getImages } from "../api"
 import { useToast } from "vue-toastification";
 
 const defaultActive = ref("")
-const dirs = ref([])
+const dirs = ref(["DEG", "WGCNA", "Differential co-expression"])
 const images = ref([])
 const toast = useToast()
 
 onMounted(async () => {
-    const result = await getAllDirectories("Gene")
-    if (result.success) {
-        dirs.value = result.data;
-        defaultActive.value = dirs.value[0];
-        handleClickTabpane(dirs.value[0])
-    } else {
-        toast.error(result.message);
-    }
+    defaultActive.value = dirs.value[0];
+    handleClickTabpane(dirs.value[0])
 });
 
 async function handleClickTabpane(name, _ = null) {
@@ -45,8 +39,9 @@ async function handleClickTabpane(name, _ = null) {
             <el-col :span="20">
                 <div class="flex items-center justify-center">
                     <el-image v-for="image of images" preview-teleported :key="image.fullName"
-                        :src="`http://localhost:3001/${image.url}`" class=" w-full h-[780px]" :zoom-rate="1.2" :max-scale="12"
-                        :preview-src-list="[`http://localhost:3001/${image.url}`]" :min-scale="0.1" fit="cover">
+                        :src="`http://localhost:3001/${image.url}`" class=" w-full h-[780px]" :zoom-rate="1.2"
+                        :max-scale="12" :preview-src-list="[`http://localhost:3001/${image.url}`]" :min-scale="0.1"
+                        fit="cover">
                     </el-image>
                 </div>
             </el-col>
