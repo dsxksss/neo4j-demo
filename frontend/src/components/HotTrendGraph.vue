@@ -1,16 +1,22 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { getImages } from "../api"
+import { getAllDirectories, getImages } from "../api"
 import { useToast } from "vue-toastification";
 
 const defaultActive = ref("")
-const dirs = ref(["DISEASE", "Chemicals and Drugs", "Differential co-expression"])
+const dirs = ref([])
 const images = ref([])
 const toast = useToast()
 
 onMounted(async () => {
-    defaultActive.value = dirs.value[0];
-    handleClickTabpane(dirs.value[0])
+    const result = await getAllDirectories("HotTrendGraph")
+    if (result.success) {
+        dirs.value = result.data;
+        defaultActive.value = dirs.value[0];
+        handleClickTabpane(dirs.value[0])
+    } else {
+        toast.error(result.message);
+    }
 });
 
 async function handleClickTabpane(name, _ = null) {
@@ -53,7 +59,7 @@ async function handleClickTabpane(name, _ = null) {
     min-height: 400px;
 }
 
-.el-tabs--border-card>.el-tabs__content{
+.el-tabs--border-card>.el-tabs__content {
     padding: 0px;
 }
 </style>

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { getImages } from "../api"
+import { getAllDirectories, getImages } from "../api"
 import { useToast } from "vue-toastification";
 
 const defaultActive = ref("")
@@ -10,8 +10,14 @@ const toast = useToast()
 const currentDir = ref("DEG")
 
 onMounted(async () => {
-    defaultActive.value = dirs.value[0];
-    handleClickTabpane(dirs.value[0])
+    const result = await getAllDirectories("Gene")
+    if (result.success) {
+        dirs.value = result.data;
+        defaultActive.value = dirs.value[0];
+        handleClickTabpane(dirs.value[0])
+    } else {
+        toast.error(result.message);
+    }
 });
 
 async function handleClickTabpane(name, _ = null) {
@@ -24,11 +30,11 @@ async function handleClickTabpane(name, _ = null) {
     }
 }
 
-function getImageElementStyle(){
-    return currentDir.value == "DEG"?
-    `object-cover transition ease-in-out duration-200 hover:-translate-y-1 hover:scale-[0.85] block object-center scale-[0.8]`
-    : 
-    `object-cover transition ease-in-out duration-200 hover:-translate-y-1 hover:scale-[1.05] block object-center scale-[1.0]`
+function getImageElementStyle() {
+    return currentDir.value == "DEG" ?
+        `object-cover transition ease-in-out duration-200 hover:-translate-y-1 hover:scale-[0.85] block object-center scale-[0.8]`
+        :
+        `object-cover transition ease-in-out duration-200 hover:-translate-y-1 hover:scale-[1.05] block object-center scale-[1.0]`
 }
 
 </script>
