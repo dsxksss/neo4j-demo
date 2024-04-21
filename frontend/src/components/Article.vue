@@ -36,9 +36,9 @@ async function handleClickTabpane(name, _ = null) {
     <el-tab-pane label="Article" name="Article">
         <el-row class="tac">
             <el-col :span="2">
-                <el-scrollbar height="80vh">
+                <el-scrollbar height="89.5vh">
                     <el-menu :default-active="defaultActive" @select="(title, _, __, ___) => handleClickTabpane(title)"
-                        class="w-[150px] z-10 min-h-[80vh]">
+                        class="w-[113px] z-10 min-h-[80vh]">
                         <el-menu-item v-for="dir of dirs" :index="dir">
                             <template #title>{{ dir }}</template>
                         </el-menu-item>
@@ -47,7 +47,7 @@ async function handleClickTabpane(name, _ = null) {
             </el-col>
 
             <el-col :span="22">
-                <div class="snap-y w-full h-[80vh] overflow-y-auto space-y-10 ">
+                <div class="snap-y w-full h-[89.7vh] overflow-hidden">
                     <div v-for="image of images" class="snap-start w-full h-full flex justify-center items-center">
                         <el-image preview-teleported :key="image.fullName"
                             :src="`http://localhost:3001/${image.url}`" class="object-cover transition ease-in-out duration-200 hover:-translate-y-1 hover:scale-[0.75] block object-center scale-[0.7]" :zoom-rate="1.2"
@@ -64,5 +64,9 @@ async function handleClickTabpane(name, _ = null) {
 <style>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
     min-height: 400px;
+}
+
+.el-tabs__header{
+    margin: 0px;
 }
 </style>

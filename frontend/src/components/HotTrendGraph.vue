@@ -37,7 +37,7 @@ async function handleClickTabpane(name, _ = null) {
             </el-col>
 
             <el-col :span="20">
-                <el-scrollbar height="92vh">
+                <el-scrollbar height="94.5vh">
                     <el-image v-for="image of images" preview-teleported :key="image.fullName"
                         :src="`http://localhost:3001/${image.url}`" class="" :zoom-rate="1.2" :max-scale="12"
                         :preview-src-list="[`http://localhost:3001/${image.url}`]" fit="cover">
@@ -51,5 +51,9 @@ async function handleClickTabpane(name, _ = null) {
 <style>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
     min-height: 400px;
+}
+
+.el-tabs--border-card>.el-tabs__content{
+    padding: 0px;
 }
 </style>
