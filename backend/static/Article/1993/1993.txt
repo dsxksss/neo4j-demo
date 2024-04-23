@@ -1,0 +1,12 @@
+1. Disease progression and associated symptoms
+Relationship: developed, associated, aging
+The development of Alzheimer's disease may involve a specific procedure or process (developed procedure), which may point to different stages of disease development or the evaluation of treatment response. It's associated with amnesia, which is one of its core symptoms. The disease is closely related to the aging brain, reflecting that age is an important risk factor for the disease.
+2. Diagnosis and research methods
+Relationships: includes, using, found
+diagnosis includes Alzheimer's disease, emphasizing the importance of diagnosis. using immunohistochemistry is a key technique in research and diagnosis, which helps to identify biomarkers of diseases. The pathological changes associated with the disease can be found at autopsy, which is very important in diagnosis and research.
+3. Genetics and risk factors
+Relation: with, propose
+The presence of a pedigree with Alzheimer's disease may indicate a role for genetic factors in pathogenesis. It is proposed that aluminum may be a risk factor for the disease, reflecting the possible role of environmental factors in the pathogenesis of AD.
+4. Biomarkers and pathological mechanisms
+Relationship: increase, activating, reported, developed
+Alzheimer's disease leads to an increase in specific receptors, which may affect nerve transmission and cell function. activating DNA may be involved in changes in gene expression in disease. Changes in acetylcholinesterase have been reported in Alzheimer's disease, which is associated with dysregulated neurotransmission. Disease development has been linked to galanin, a neuropeptide that may play a role in regulating nervous system function.

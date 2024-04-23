@@ -1,0 +1,23 @@
+1. Research on treatments and drugs
+Relationships: treat, ameliorates, treating, against and cure
+Analysis: These triples show a wide range of attempts to treat AD, both pharmacological and non-pharmacological, Such as [['drugs', 'treat', "Alzheimer's disease"]], [['coffee', 'against', "Alzheimer's disease"]], and [['administration', 'ameliorates', "Alzheimer' s diseases"]]. These studies suggest that everything from conventional medications to lifestyle modifications, such as coffee consumption, are in focus. [['Rivastigmine', 'treat', "Alzheimer's disease"]] and [['immunotherapy', 'against', "Alzheimer's disease"]] specifically points to some specific treatments and drugs.
+2. Pathological features and biomarkers
+Relation: contains, harbor, related, detecting, characterized, monitor, using, related
+Analysis: The pathological features of AD and the identification of its biomarkers are the core of current research. Such as [['Alzheimer's disease', 'contains', 'cysteine']], [['Alzheimer's disease', 'harbor', 'lymphocytes']], and [['biomarkers', 'detecting', "Alzheimer's disease"]]. These triples highlight the importance of identifying and utilizing biomarkers in AD research to facilitate early diagnosis and disease progression monitoring.
+3. Associations with other conditions
+Relationship: diabetes, hypertension, exacerbated
+Analysis: The link between AD and other health problems, Such as [['Alzheimer's disease', 'diabetes', 'hypertension']] and [['hypertension', 'exacerbated', "Alzheimer's disease"]], It is revealed that AD is not only an isolated neurodegenerative disease, but also has a close relationship with systemic health conditions, especially with metabolic disorders and cardiovascular health.
+4. Research methods and models
+Relationships: investigated, neuroimaging, dataset, using, designed, established
+Analysis: Methods and models used in AD research, Examples include [['Alzheimer's disease', 'investigated', 'memantine']], [['neuroimaging', 'dataset']], and [['autoradiography', 'using', "Alzheimer's disease"]], shows the application of modern technology and methods in AD research. In particular, the use of neuroimaging and molecular biology techniques provides powerful tools for in-depth understanding of the pathological mechanism of AD and evaluating the therapeutic effect. 1. Research on treatments and drugs
+Relationships: treat, ameliorates, treating, against and cure
+Analysis: These triples show a wide range of attempts to treat AD, both pharmacological and non-pharmacological, Such as [['drugs', 'treat', "Alzheimer's disease"]], [['coffee', 'against', "Alzheimer's disease"]], and [['administration', 'ameliorates', "Alzheimer' s diseases"]]. These studies suggest that everything from conventional medications to lifestyle modifications, such as coffee consumption, are in focus. [['Rivastigmine', 'treat', "Alzheimer's disease"]] and [['immunotherapy', 'against', "Alzheimer's disease"]] specifically points to some specific treatments and drugs.
+2. Pathological features and biomarkers
+Relation: contains, harbor, related, detecting, characterized, monitor, using, related
+Analysis: The pathological features of AD and the identification of its biomarkers are the core of current research. Such as [['Alzheimer's disease', 'contains', 'cysteine']], [['Alzheimer's disease', 'harbor', 'lymphocytes']], and [['biomarkers', 'detecting', "Alzheimer's disease"]]. These triples highlight the importance of identifying and utilizing biomarkers in AD research to facilitate early diagnosis and disease progression monitoring.
+3. Associations with other conditions
+Relationship: diabetes, hypertension, exacerbated
+Analysis: The link between AD and other health problems, Such as [['Alzheimer's disease', 'diabetes', 'hypertension']] and [['hypertension', 'exacerbated', "Alzheimer's disease"]], It is revealed that AD is not only an isolated neurodegenerative disease, but also has a close relationship with systemic health conditions, especially with metabolic disorders and cardiovascular health.
+4. Research methods and models
+Relationships: investigated, neuroimaging, dataset, using, designed, established
+Analysis: Methods and models used in AD research, Examples include [['Alzheimer's disease', 'investigated', 'memantine']], [['neuroimaging', 'dataset']], and [['autoradiography', 'using', "Alzheimer's disease"]], shows the application of modern technology and methods in AD research. In particular, the use of neuroimaging and molecular biology techniques provides powerful tools for in-depth understanding of the pathological mechanism of AD and evaluating the therapeutic effect.

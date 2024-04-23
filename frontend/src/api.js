@@ -24,6 +24,16 @@ const getImages = async (pname,dirname) => {
     }
 };
 
+// Function to get texts in a directory
+const getTexts = async (pname,dirname) => {
+    try {
+        const response = await axios.get(`${BASE_URL}/text/${pname}/${dirname}`);
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+};
+
 // Function to get all directories
 const getAllDirectories = async (pname) => {
     try {
@@ -77,6 +87,7 @@ const deleteDirectory = async (pname,dirname) => {
 export {
     uploadImages,
     getImages,
+    getTexts,
     getAllDirectories,
     renameImage,
     renameDirectory,

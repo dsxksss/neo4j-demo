@@ -1,0 +1,18 @@
+1. Treatment
+Relationship: Treated
+A variety of drugs for AD, such as memantine, galantamine, and risperidone, are highlighted. These treatments reflect the pursuit of diverse treatment strategies for AD.
+2. Pathological features and biomarkers
+Relations: Characterized, Associated, Disrupt, Type, Contains, Involved, Diagnosed, Progresses
+Multiple pathological features and biomarkers of AD are described, such as association with cholesterol, characteristics of amyloid plaques, the presence of copper, progression of hippocampal lesions, and the hypothesized role of DNA. These features and markers are crucial for understanding the biological basis of AD.
+3. Research focus and progress
+Relationships: Using, Examined, Exploring, living, Confirmed, Coexist, Represents, Hypothesized
+We show multiple directions for AD research, including the use of proteolysis, confirmation through autopsy, hypothesized relationships with DNA, and exploration of other pathologies coexisting with the disease. This reflects the in-depth exploration of AD complexity by the scientific community.
+4. The relationship between AD and other diseases
+Relationship: Coexist, Diagnosed
+The co-existence of AD with other diseases, such as being diagnosed with schizophrenia, is explored, noting that patients with AD may face multiple health challenges simultaneously.
+5. Risk factors
+Relationship: Associated, Increased
+Potential risk factors for AD, such as association with specific genes and increased cholesterol levels, are highlighted. The identification of these risk factors is essential for early diagnosis and the development of prevention strategies.
+6. Social and scientific cognition
+Relationship: Growing, Increased incidence
+The growing incidence of AD and the increasing concern of the scientific community about this issue are highlighted. This indicates that AD has become an important public health problem as the population ages.

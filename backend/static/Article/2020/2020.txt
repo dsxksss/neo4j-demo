@@ -1,0 +1,18 @@
+1. Association between health conditions and AD
+Relationship: promote, diabetes, hypertension
+Analysis: These triples suggest that hypertension and diabetes may contribute to the development of AD. For example, ['hypertension', 'promote', "Alzheimer's disease"] states that hypertension may increase the risk of AD, And ["Alzheimer's disease", 'diabetes', 'hypertension'] is associated with the co-occurrence of diabetes and hypertension with AD, suggesting that there may be interaction or common pathological mechanism between these metabolic diseases and AD.
+2. Genetic factors
+Relation: regulate, modifies, caused
+Analysis: The role of ApoE ['ApoE', 'regulate', "Alzheimer's disease"] and its ability to modify the risk of AD ['APOE', 'modifies', "Alzheimer's disease"] highlights the importance of genetic factors in the development of AD. AD caused by Presenilin-1 ["Alzheimer's disease", 'caused', 'Presenilin-1'] further confirms a direct link between specific genetic variants and the pathogenesis of AD.
+3. Research tools and methods
+Relations: underwent, neuroimaging, captured
+Analysis: Tools and methods used in AD research include autopsy ["Alzheimer's disease", 'underwent', 'autopsy'], neuroimaging datasets ["Alzheimer's disease", 'neuroimaging', 'dataset'] and biomarkers captured through these techniques ["Alzheimer's disease", 'captured', 'biomarkers']. These tools provide researchers with the means to gain insight into the pathological course of AD, as well as the possibility to diagnose and evaluate the effect of treatment.
+4. Pathological features and therapeutic targets
+Relation: presented, Activated, decrease, face-to-face, including, Targeting
+Analysis: Pathological features of AD such as calmodulin expression ["Alzheimer's disease", 'presented', 'calmodulin'] and macrophage activation ["Alzheimer's disease", 'Activated', 'macrophages'] reveal potential therapeutic targets. In addition, AD treatment strategies are moving toward increasing neuroprotection ["Alzheimer's disease", 'decrease', 'neuroprotection'], promoting cell polarization ["Alzheimer's disease", 'Facilitating ', 'polarization'] and the maintenance of protein homeostasis ["Alzheimer's disease", 'including', 'proteostasis'].
+5. Lifestyle and disease management
+Relationship: treating, against, deliver, treat
+Analysis: ['drug', 'treating', "Alzheimer's disease"], ['drug', 'treat', "Alzheimer's disease"] and ligand therapies for AD ['ligands', 'against', "Alzheimer's disease"] demonstrate current treatment options for managing the symptoms and progression of AD. The involvement of physicians ['physicians', 'deliver', "Alzheimer's disease"] is essential to implement an effective treatment plan.
+6. Other related diseases
+Relationships: with, coupled, interacts, associates
+Analysis: AD is associated with other diseases, Such as with mental disease ["Alzheimer's disease", 'with', 'schizophrenia'], ['risk', 'developing', "Alzheimer's disease"], psychological condition ["Alzheimer's disease", 'coupled', 'psychological'], educational interaction ["Alzheimer's disease", 'interact', 'education'] and the relationship between lipoprotein [" Alzheimer 's diseases ",' associates', 'lipoproteins] is pointed out that the complexity of the AD, not only is a kind of neurodegenerative diseases, is associated with a variety of physical and psychological factors.

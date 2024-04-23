@@ -1,0 +1,15 @@
+1. Characteristics and treatment of AD
+Relationship: occurs, treated, treat, improves, administered
+Analysis: For example, [["Alzheimer's disease", 'occurs', 'humans']] makes it clear that AD is a disease unique to humans. In terms of treatment, [['Memantine', 'treat', "Alzheimer's disease"]], [["Alzheimer's disease", 'treated', 'vildagliptin']] show drug treatments for AD, Such as Memantine and Vildagliptin. [["Alzheimer's disease", 'improves', 'insulin']] highlights that treatment may be beneficial in improving insulin sensitivity.
+2. Comorbidity and lifestyle factors
+Relationship:), associated, confounding
+Analysis: The coexistence of AD with other diseases, such as [["Alzheimer's disease", 'abide ', 'liver']], reveals multiple health problems that AD patients may experience. Meanwhile, [["Alzheimer's disease", 'associated', 'epilepsy']] suggests a possible link between AD and other neurological diseases such as epilepsy.
+3. Pathological mechanism
+Relations: Accumulated, disrupted, expressing, contains, raises
+Analysis: The pathological mechanism of AD includes the accumulation of mitochondria [["Alzheimer's disease", 'Accumulated', 'mitochondria']], the expression of Caspase-6 in the apoptotic pathway [["Alzheimer's disease", 'expressing', 'Caspase-6']], etc. The understanding of these mechanisms is essential for exploring new therapeutic targets.
+4. Biomarkers and diagnostic tools
+Relationships: diagnose, detect, predicting, neuroimaging
+Analysis: Biomarkers play an increasingly important role in the diagnosis of AD, For example, [['biomarkers', 'diagnose', "Alzheimer's disease"]], [['biomarkers', 'predicting', "Alzheimer's disease"]]. neuroimaging databases [["Alzheimer's disease", 'neuroimaging', 'database"]] provide researchers with important insights into disease progression.
+5. Research tools and methods
+Relations: neuroimaging, database, targeting, tackling, regulate
+Analysis: A variety of tools and methods have been employed in AD studies, including neuroimaging techniques and specific databases. [['immunotherapy', 'target', "Alzheimer's disease"]] and [['dataset', 'tackling', "Alzheimer's disease"]] demonstrates the progress of modern scientific research in exploring treatments for AD and understanding its complexity.

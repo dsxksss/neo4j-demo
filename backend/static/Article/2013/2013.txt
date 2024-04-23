@@ -1,0 +1,15 @@
+1. Treatments and drugs
+Relationships: Investigate, Had, Considered, Treat, Treating, Using
+We explored various treatments for AD, These include investigating the use of ibuprofen, had donepezil treatment, immunotherapy considered, use of memantine treatment AD), and the use of specific drugs such as edaravone treating and curcumin treating.
+2. Pathological features and biomarkers
+Relationships: Like, Occurs, Induced, Activated, Based, Established, Including
+The pathological features and biomarkers of AD are described. Such as similar to neuropathology (like neuropathology), occurs neuropathology (occurs neuropathology), symptoms induced by scopolamine (induced scopolamine), Activated microglia (Activated) microglia).
+3. Risk factors and impacts
+Relation: Associated, Reduce, Predispose, Including
+Risk factors and effects associated with AD, These include associated cholesterol, microglia reduce AD, genes predispose to genetic factors, and including obesity.
+4. Scientific research and progress
+Relation: Measuring, Predict, Compared, Epitope, Propose
+The focus and progress of AD scientific research, These include biomarkers measuring, biomarkers predict, compared with acetylcholinesterase, epitope study of vaccine vaccine) and propose nursing.
+5. The relationship between AD and other diseases
+Relationship: Diabetes, Hypertension, Anxiety, Scopolamine, Osteoporosis, Hyperhomocysteinemia
+Describes the relationship between AD and other diseases, Such as diabetes mellitus, hypertension diabetes, anxiety as a prodromal symptom, osteoporosis Hyperhomocysteinemia occurred) and Hyperhomocysteinemia with AD.

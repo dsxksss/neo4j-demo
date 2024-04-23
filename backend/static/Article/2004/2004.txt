@@ -1,0 +1,15 @@
+1. Etiology and biomarkers
+Relationships: Signaling, Characterized, Activated, Explained, Increased, Suggest, Located, Derived
+These triples explore biomarkers and potential causes of Alzheimer's disease, For example, signaling receptor, characterized by amyloid, activated microglia, APOE explained APOE), suggest mitochondria (located in mitochondria) and factors derived from membrane in the pathogenesis of disease.
+2. Treatment and disease management
+Relationship: Treated, Besides, Treat, Allows
+Treatments for Alzheimer's disease include the use of memantine, treated with acetylcholinesterase inhibitors, donepezil), Galantamine (treat Alzheimer's disease) and other drugs. These triples also highlight the importance of disease management.
+3. Disease influence and cognition
+Relationship: Between, Reduce, Benefit, Bring, Gaining
+The impact of Alzheimer's disease on patients includes the impact on cognition and awareness (between awareness, benefit awareness), the reduction of plaque formation (reduce plaque), and the gradual increase of knowledge about the disease (gaining recognition). This shows the importance of increasing public awareness and understanding of Alzheimer's disease.
+Risk factors and related diseases
+Relationships: Associated, Include, Diabetes, Against, Hypoxic
+Revealing the risk factors and co-morbidities associated with Alzheimer's disease, Such as associated with anxiety, include hypertension, diabetes with hypertension and bring cholesterol, against Alzheimer's disease). hypoxic up-regulation was also observed.
+5. Research methods and data
+Relationship: Conducted, Measured
+Methods and data acquisition used in Alzheimer's disease research, such as conducted life and measured calcium. These triples demonstrate the diverse approaches taken by researchers to explore disease mechanisms and assess patient status.

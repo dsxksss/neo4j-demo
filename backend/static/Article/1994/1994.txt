@@ -1,0 +1,9 @@
+1. Hypothesis and pathological mechanism
+Relationships: hypothesized, contribute, derived, overactive
+The hypothesized relationship between Alzheimer's disease and memory loss highlights the exploration and theoretical construction of the basis of the disease. Microglia are thought to contribute to Alzheimer's disease and may be involved in the development of the disease through mechanisms such as inflammatory response. The derivation from the membrane may point to a role for cellular dysfunction. overactive microglia are associated with neuroinflammatory processes in disease.
+2. Disease progression
+Relationship: aged, following, between
+The risk of Alzheimer's disease increases with the aged brain, highlighting age as an important risk factor. The development of the disease may follow the effects of certain therapeutic or experimental procedures, such as injections. The relationship between ""Alzheimer's disease"" and hydrolysis may point to the role of biochemical processes in the development of the disease.
+3. Treatment
+Relationship: administered, given
+Physostigmine, administered to Alzheimer's disease, is a drug that acts by enhancing cholinergic transmission. Similarly, tacrine is given to Alzheimer's disease as a treatment, which is also a drug designed to improve cognitive function. These treatments reflect attempts at pharmacological interventions targeting the symptoms of the disease.

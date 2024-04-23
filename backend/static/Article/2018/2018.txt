@@ -1,0 +1,15 @@
+1. Comparing research and disease relationships
+Relationship: against, involves, characterized, contributing, increase, Using, comparing, blocked, addressed, requires, showed,  admitted
+Analysis: This category deals with key features of AD, such as the relationship with acetylcholine [["Alzheimer's disease", 'involves', 'acetylcholine']], as well as common disease manifestations, Such as memory loss [["Alzheimer's disease", 'characterized', 'amnesia']]. In addition, treatment approaches, including the use of drugs (e.g. donepezil comparative studies) and possible therapies (e.g., ligands for specific molecular targets), as well as new strategies in disease treatment and research (using fornix, neuroimaging databases) are also highlighted.
+2. Comorbidity and lifestyle factors
+Relation: diabetes, obesity, accelerate, concerning
+Analysis: revealed the association between AD and metabolic diseases such as obesity, diabetes and hypertension. Such as [["Alzheimer's disease", 'diabetes', 'obesity']], [['obesity', 'diabetes', "Alzheimer's disease"]], These triples highlight the impact of lifestyle factors on AD risk and the possibility that metabolic diseases may accelerate AD progression.
+3. Pathological mechanism
+Relation: as, Accumulated, demonstrated, related
+Analysis: The pathological mechanisms involved in AD, especially changes at the cellular level, Such as mitochondrial accumulation [["Alzheimer's disease", 'Accumulated', 'mitochondria']] and hippocampal changes [["Alzheimer's disease", 'demonstrated', 'hippocampal']]. These triples provide insight into the complex pathological context of AD, including mitochondrial dysfunction and the affected of specific brain regions.
+4. Research tools and methods
+Relation: neuroimaging, database
+Analysis: Clarify the tools and methods used in AD research, especially the application of neuroimaging techniques [["Alzheimer's disease", 'neuroimaging', 'database']]. These triples demonstrate how modern technology can be used to explore the neurobiological basis of AD, improving the ability to diagnose and monitor the disease early.
+5. Biomarker and vaccine research
+Relationship: detect, against, reduce
+Analysis: Focus on identifying biomarkers of AD [['biomarkers', 'detect', "Alzheimer's disease"]] and developing vaccines against AD [['vaccine', 'reduce', "Alzheimer's disease"]]. These research directions aim to improve the diagnostic accuracy of AD and develop new prevention and treatment strategies.

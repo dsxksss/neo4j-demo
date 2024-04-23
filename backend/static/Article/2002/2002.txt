@@ -1,0 +1,18 @@
+1. Disease characteristics and effects
+Relationships: Burnout, Have, Affected, Characterised, Sustain, Emerging, Elevated
+These triples describe the multifaceted effects of AD, including the "burnout literature", the affected brain, and the link to specific pathological features. It also highlights how diseases affect sustain memory (implicated in memory loss) and emerging health problems, as well as Elevated serum levels.
+2. Research and data
+Relationship: Investigating, Combining, Assess, Established, Activation, Showed, Activation
+These triples show the research activity around Alzheimer's disease, For example, investigating genes, combining databases, assessing prevalence, establishing studies research) and analysis of activation patterns (activation, showed activation). This indicates the efforts of researchers in finding disease mechanisms and epidemiological data.
+3. Risk factors and prevention
+Relationship: Exposure, Prevent, Antioxidants
+Potential risk factors for Alzheimer's disease, such as exposure to aluminum and prevention with Antioxidants, are revealed, pointing to possible ways to reduce the risk of the disease.
+4. Treatment and management
+Relationships: Sought, Administered, Drug, Neuroprotection, Reviewed
+These triples focus on the treatment and management of Alzheimer's disease, These include drug sought, administered donepezil, and neuroprotection against Alzheimer's disease. It also involves reviewed reimbursement of treatment strategies.
+5. Genetics and gene expression
+Relationship: Investigating, Acquired, With, Have
+The genetic link to Alzheimer's disease is reflected in these triples, showing investigating genes, acquired genes, apoE with Alzheimer's disease, And the effect of specific genotypes (have knockout).
+6. Other related issues
+Relation: Diabetes, youdaoplaceholder5, Suppress, Associated
+Other related triples revealed links between Alzheimer's and other diseases, such as diabetes and stroke, And how diseases affect cellular processes (facilitates translocation, suppress recognition) and association with specific biological processes (associated activation).

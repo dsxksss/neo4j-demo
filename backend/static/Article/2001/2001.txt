@@ -1,0 +1,12 @@
+1. Etiology and biomarkers
+Relationships: Cause, Derived, o, Polymorphism, the Variant, Overexpressing, Linked
+Such triples point to potential causes of Alzheimer's disease, such as the role of specific genes, changes in proteolysis processes, polymorphisms and variants associated with the disease. Amyloid protein expression (overexpressing amyloid) and contains some proteins such as albumin, points out the biomarkers of disease.
+2. Symptoms and diagnosis
+Relationships: Have, Displays, Including, Identified, Type, Related, Examined
+The symptoms and diagnosis of Alzheimer's disease are illustrated by these triples, have memory loss, displays amyloid, including plaque, and identified by autopsy are highlighted. In addition, the disease is diagnosed by specific type of pathology and related pathology.
+3. Research methods and objectives
+Relationships: Using, Targeting, Conducted, Focusing, Apply, Predict, Improve
+These triples reveal research methods and goals for Alzheimer's disease, These include the use of specific techniques (such as electrophoresis and blotting) to study disease, targeting neuroprotection, and focusing on chromosomes. The ApoE gene has been shown to play an important role in predicting Alzheimer's disease, and studies have been conducted to improve survival.
+4. Disease management and social impact
+Relationship: Limited, Died
+Such triples highlight the problems of Alzheimer's disease in medical management and social impact, such as limited physicians dealing with Alzheimer's patients and patients dying at home, reflecting the need for patient care and social support systems.

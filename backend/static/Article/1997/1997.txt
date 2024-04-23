@@ -1,0 +1,12 @@
+1. Genetic markers and biomarkers
+Relations: of, showing, associated, epsilon, measured, characterized, apply
+Alzheimer's disease has a strong association with the ApoE protein (of ApoE, showing ApoE), further strengthening the link between the APOE gene variant (epsilon) and the development of the disease. Markers associated with serum, measured in fluid, and the application to receptors of specific cells are all important aspects in diagnosing and understanding disease mechanisms.
+2. Therapeutic research and drug application
+Relationship: treated, suggesting, blocks, inhibits
+Using tacrine treated, suggesting tacrine and lithium blocks as treatments, as well as inhibits acetylcholinesterase, Shows research on drug treatments for Alzheimer's disease.
+3. Pathology and symptoms
+Relation: characterize, have, activated, exhibit
+Amyloid deposition is a pathological feature characterize Alzheimer's disease, and disease-induced dysfunction such as have apraxia and activated microglia demonstrate the effects of the disease on the brain.
+Risk factors and disease progression
+Relationship: causing, onset, aging, risk developing, before diagnosis
+Specific genetic variants (mutation causing) and aging brain (aging brain) are major risk factors for developing Alzheimer's disease. The early diagnosis of the disease is very important to delay the progression of the disease.

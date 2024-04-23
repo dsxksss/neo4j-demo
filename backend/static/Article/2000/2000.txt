@@ -1,0 +1,12 @@
+1. Etiology and biomarkers
+Relationships: Derived, Produced, Caused, Characterized, Affecting, Includes
+Alzheimer's disease is linked to many factors, For example, susceptibility caused by genes, brain derived, characterized by amyloid, produced by mitochondria, and caused by mutation. These triples point to potential biological markers and causes of the disease.
+2. Research and education
+Relation: Regarding, Advance, Accelerate, Since
+research and education on Alzheimer's disease are advancing and accelerating, It covers many aspects such as basic research regarding Alzheimer's disease, public education regarding Alzheimer's disease and so on. This suggests that a deeper understanding of the disease and increased public awareness are seen as important steps in the fight against it.
+3. Treatment and medication
+Relationship: Treated, Has
+Treatments for Alzheimer's disease include the use of multiple drugs (treated with memantine, treated with donepezil), and the application of Donepezil (has Donepezil). These triples highlight the diversity of current treatments as well as the use of specific drugs.
+4. Symptoms and diagnosis
+Relations: Characterize, Confirmed, characterize, Assessed
+The diagnosis of Alzheimer's disease usually involves the identification of its characteristic symptoms (characterize by pathology), confirmed by autopsy (confirmed by autopsy), known as memory loss (termed), etc. Additionally, the disease status assessed by State is part of the diagnostic process. Such triples reveal the diagnostic methods and symptoms of the disease.

@@ -1,0 +1,15 @@
+1. Genetic and molecular biology research
+Relationship: epsilon4_associated, have, associated, demonstrate, confirmed, determine, found, activates, suggests, revealed,  indicating
+The association of ApoE ε4 allele with Alzheimer's disease (epsilon4_associated) and other genetic factors (mutation, trisomy) play an important role in the study of genetic background of the disease. In addition, the study of RNA, Bcl_2 protein, microglia activation, α-synuclein revealed the molecular mechanism and pathological process of the disease.
+2. Medication
+Relationship: treating, taking, receiving
+The use of Tacrine indicates a treatment attempt for Alzheimer's disease, either being treated or considered as a treatment.
+3. Pathological features and diagnostic methods of the disease
+Relationships: shows, procedure isolates, derived
+Alzheimer's disease shows pathology, as well as the study of specific procedure isolates and derived amyloid, providing a key perspective on the diagnosis and understanding of the disease.
+4. Risk factors and disease mechanisms
+Relationship: Because, reach, respect
+Risk factors for the disease include diabetes and accidents, among others, as well as mechanisms associated with galanin, showing the influence of disease complexity and multifactorial factors. There is a reach consensus on some aspects of the disease, such as sporadic incidence.
+5. Other research and treatment advances
+Relations: Using, with, presented, has
+Studies Using chromatography and with sleep and presented Melatonin demonstrate the diversity of disease research and the exploration of emerging treatments.

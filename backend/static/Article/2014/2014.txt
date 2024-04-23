@@ -1,0 +1,15 @@
+1. Genetic and molecular biological factors
+Relationship: linked, present, contribute
+Analysis: These triples reveal the association between specific genetic variants (polymorphisms), genetic variants (variants) and AD. For example, ['polymorphism', 'linked', "Alzheimer's disease"] indicates that genetic polymorphisms are associated with the development of AD. These findings highlight the role of genetic factors in the pathogenesis of AD and may provide clues for risk assessment and early diagnosis.
+2. Pathological mechanisms and biomarkers
+Relationships: investigated, associated, in, suggesting
+Analysis: Pathological investigations and biomarker studies, Such as [['pathology', 'investigated', "Alzheimer's disease"]] and [['biomarkers', 'suggesting', "Alzheimer's disease"]], The biological basis of AD and markers of disease progression were explored. These studies help reveal the molecular mechanisms of the disease and potential early detection markers.
+3. Therapeutic strategies and drug research
+Relationship: treating, treating, against, ameliorate
+Analysis: These triples point to multiple treatments and drug studies for AD, Examples include [['medicine', 'treating', "Alzheimer's disease"]] and [['leptin', 'against', "Alzheimer's disease"]]. These studies demonstrate the efforts of scientists to find ways to alleviate the symptoms or slow the progression of AD, including drug therapy and biological treatment strategies.
+4. The association between AD and other diseases
+Relationship: with, in, like
+Analysis: Triples such as [["Alzheimer's disease", 'with', 'glaucoma']] and [["Alzheimer's disease", 'in', 'schizophrenia']] explored the association between AD and other diseases, such as glaucoma, diabetes, and obesity. These studies may reveal common pathological processes or risk factors, providing new perspectives to understand the full picture of AD.
+6. Research models and methods
+Relationships: using, characterized, validated
+Analysis: The choice of research methods and models is crucial for AD research. For example, [[' Alzheimer 's diseases',' using ', 'zebrafish']] and [[' chromatography ', 'characterized, "Alzheimer's disease"]] shows the use of specific models (such as zebrafish) and techniques (such as chromatography) to study AD. These methods help to model the progression of a disease, verify the effect of a drug, or study the molecular characteristics of a disease

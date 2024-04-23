@@ -1,0 +1,12 @@
+1. Genetics and Biomarkers
+Relationships: apolipoprotein, stimulate, implicating, suggesting, paired, determined, screened, derived
+AD is associated with specific genetic factors, such as the association with specific alleles of apolipoprotein. Certain biochemical reactions are activated during the disease process (stimulate guanylate) or are suggested by the study of biomarkers (suggesting apoE). It also involves the identification of specific proteins (such as paired filaments), determination using techniques such as western blotting, and screening by screened electrophoresis, To explore the derived proteolysis pathway of disease.
+2. Disease characteristics and management
+Relationships: among, control, caregiver, plan, manage, at home
+Research suggests that there may be specific patterns in the incidence of Alzheimer's disease among women. The measures of disease management (control brain) and caregiver personality (caregiver personality) aim at the long-term nature of the disease (control chronic) and daily care (manage at home), emphasizing the important role of family and caregivers in disease management.
+3. Pathological mechanism
+Relation: induce, neurodegeneration, as, derived
+AD induces the activation of astrocytes and induce neurodegeneration, which is a pathological process unique to the disease. In addition, diseases are closely related to the process of protein degradation (derived proteolysis), suggesting the role of complex molecular mechanisms in the development of diseases.
+4. Treatment and research methods
+Relationships: enrolled, treated, limited research, culture modeling
+Patients being enrolled in drug trials (enrolled drug) and receiving specific treatments (treated tacrine) demonstrate attempts to treat Alzheimer's disease. However, limited research remains, suggesting that more research is needed to explore effective treatments. In vitro culture modeling is a research tool to help simulate and study the mechanism of diseases.

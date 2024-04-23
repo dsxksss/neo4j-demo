@@ -1,0 +1,21 @@
+1. Genetic and molecular mechanisms
+Relationships: Polymorphism, Regulated, Derived
+The genetic and molecular mechanisms of AD include polymorphism of AD, Regulated proteolysis, and derived amyloid.
+2. Risk factors and impacts
+Relationships: Convert, Diabetes, Obesity, Influence
+Risk factors for AD, such as convert cholesterol, diabetes and obesity, and cholesterol influence AD, are described.
+3. Pathological features and biomarkers
+Relations: Involved, Presented, Associated, Identify, Using, Verified, Derived, Related, Distinguished, Confirmed
+Pathological features and biomarkers of AD, including involved acetylcholinesterase, presented myoclonus, associated spine pathology, identify biomarkers, by using pathologic, and by verified autopsy.
+4. Treatments and drugs
+Relationships: Treating, Against, Recruit, Base, Therapeutic, Treat, Ameliorating, Investigated
+AD treatment methods and drugs, such as medicine treating AD, drugs and substances against AD (caffeine, coffee, drug, ligands against AD), Treatment with receptors (receptors treat AD), through the treatment to improve AD (leptin ameliorating AD), and the study of the nicotine (investigated nicotine).
+5. Research methods and tools
+Relation: By, Using
+AD research methods and tools, such as By immunohistochemistry and using specific techniques or methods in different contexts.
+6. The relationship between AD and other diseases
+Relationship: As, Diabetes
+AD as a condition associated with other diseases, for example, is seen as a condition similar to hypertension (as hypertension), and is linked to diabetes (diabetes with AD).
+7. Scientific exploration and theory
+Relation: Suggests, Governs
+Scientific exploration and theoretical considerations such as suggests trehalose, and governs entropy.

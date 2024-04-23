@@ -1,0 +1,18 @@
+1. Pathological features and biomarkers
+Relations: Preceding, Accompanied, Demonstrate, Classify, Associated, Demonstrated, Revealed
+Pathological features and biomarkers of Alzheimer's disease (AD), such as preceding pathology, accompanied symptoms such as hysmell, and described in literature. AD has been linked to specific conditions such as schizophrenia (associated with schizophrenia) and epilepsy (associated with seizures).
+2. Treatments and drugs
+Relationships: Drug, Immunization, Vaccine, Therapeutic, Treated, Lowering, Ameliorating
+Treatments and drugs for AD, Including immunization against AD, vaccine against AD, drug against AD, treated with rivastigmine, Treated with Memantine), and the drugs to lower cholesterol, Lowering cholesterol) and improve the treatment of disease (ameliorating AD with leptin).
+3. Risk factors and impacts
+Relationships: Oxidize, Suggest, Contribute, Accelerate
+Risk factors and effects of AD, such as oxidize DNA, suggest cholesterol, and obesity diabetes with AD. Certain factors such as general anesthesia may accelerate AD.
+4. Research focus and progress
+Relationships: Evaluate, Generated, Investigated, Using, Exposed, Facilitate
+The focus and progress of AD research, including evaluate literature, generated proteolysis, nicotine (investigated) and the use of cysteine (investigated).
+5. The relationship between AD and other diseases
+Relationship: As, Diabetes
+Consider AD as a state of other diseases, such as hypertension and diabetes with AD.
+6. Genetic and molecular mechanisms
+Relation: Polymorphism, Requires, Inhibits, Indicate
+Genetic and molecular mechanisms of AD, such as polymorphism of AD, macroautophagy requires AD, inhibits acetylcholinesterase, And indicate caspase_3, the apoptotic execution enzyme.

@@ -1,0 +1,15 @@
+1. Treatment
+Relationships: treating, treat, against, attenuating
+Analysis: There are a number of treatments for AD, These include drug therapies (e.g., ['drug', 'treating', "Alzheimer's disease"] and ['drug', 'treat', "Alzheimer's disease"]), therapies that target specific molecular targets (['ligands', 'against', "Alzheimer's disease"]) and the reduction of AD symptoms by specific drugs (['Minocycline', 'on', "Alzheimer's disease"], ['Galantamine', 'beyond', "Alzheimer's disease"]). These triples reveal multiple strategies employed in AD treatment aimed at relieving symptoms or directly intervening in the disease process.
+2. Disease mechanisms
+Relations: Combined, via, co_exists, leads, exert, have, contributes, activated, impaired
+Analysis: Multiple disease mechanisms of AD have been explored, such as those associated with the activity of specific proteins and cell types (["Alzheimer's disease", 'Activated', 'microglia'], ["Alzheimer's disease", 'have', 'seizures']), and how specific pathways affect disease progression (["Alzheimer's disease", 'via', 'gamma']). In addition, The coexistence of AD with other pathological states (["Alzheimer's disease", 'co_exists', 'pathology']) and the impact of AD on biological disorders (["Alzheimer's disease", 'leads', 'pathology') are discussed. 'barrier']).
+3. Biomarkers
+Relationships: including, find, predict, diagnose, confirm, identified
+Analysis: Biomarkers play an important role in the diagnosis and research of AD. From finding new biomarkers (["Alzheimer's disease", 'find', 'biomarkers']), To the use of biomarkers to predict AD progression (['biomarkers', 'predict', "Alzheimer's disease"]) and diagnose (['biomarkers', 'diagnose', "Alzheimer's disease"]), To a broader study that relies on biomarkers (["Alzheimer's disease", 'biomarkers']). These triples highlight the central role of biomarkers in the early identification and monitoring of AD progression.
+4. Research tools and methods
+Relations: Using, neuroimaging, database, examined, classify, discussed
+Analysis: Describes a variety of tools and methods used in AD research, Such as Using chromatography (["Alzheimer's disease", 'Using', 'chromatography']), neuroimaging databases (["Alzheimer's disease", 'neuroimaging', 'database']) and by autopsy (["Alzheimer's disease", 'underwent', 'autopsy']). These tools and methods provide researchers with the means to gain insight into the disease process.
+5. Specific characteristics and associated conditions
+Relations: affects, showing, characterized, related, combined, interact
+Analysis: These triples explore specific pathological features of AD (e.g., ["Alzheimer's disease", 'characterized', 'amnesia']) and how the disease affects the brain (["Alzheimer's disease", 'affects', 'brain']). At the same time, the relationship between AD and other conditions and disorders is discussed, including the association with cognitive impairment, psychiatric disorders, and metabolic disorders (e.g., ["Alzheimer's disease", 'related', 'aphasia'], ["Alzheimer's disease", 'interacts', 'mitochondria']).

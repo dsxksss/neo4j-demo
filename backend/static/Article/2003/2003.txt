@@ -1,0 +1,18 @@
+1. Etiology and biomarkers
+Relations: In, Potentiating, Characterized, Involves, Concluded, Hallmarks
+These triples explore the possible causes and characteristics of Alzheimer's disease, Including the association with vascular problems (in vascular), the potential role of cholesterol (potentiating Alzheimer's disease, revealed cholesterol), characterized by amyloid, involves activation and concluded aluminum. Signs of disease include specific hallmarks of the brain.
+2. Treatment and disease management
+Relationship: Vaccine, Treated, Has
+Strategies for the treatment and management of Alzheimer's disease range from vaccine development (vaccine against Alzheimer's disease) to the use of specific drugs (treated with risperidone, treated with rivastigmine), and has immunization and has insulin, through insulin.
+3. Symptoms and diagnosis
+Relationships: Showed, Related, Observed, With, Exhibit, Staged
+This type of triple focuses on the symptoms and diagnosis of Alzheimer's disease, These include the display of memory impairment (showed memory), the association with pathology (related pathology), the observed amnesia (observed amnesia), the association with hypertension (hypertension), and the indifference on display (exhibit) apathy), and staged neuropathology as determined by autopsy.
+4. Risk factors
+Relationship: Characterized, Increased, Diabetes, Affected
+Risk factors for Alzheimer's disease include cholesterol (characterized by, revealed cholesterol, increased serum levels, and diabetes and hypertension, with hypertension. The influence of these risk factors is further highlighted by the affected brain.
+Research and data
+Relation: Using, Generalized
+Research approaches to Alzheimer's disease, including using serum and Generalized anxiety with Alzheimer's Disease, reveal a diversity of research fields and potential links between the disease and other conditions.
+6. Compare and draw parallels
+Relation: As
+By comparing Alzheimer's disease with other pathologies or diseases, such as schizophrenia, such triples provide insight into the complexity of the disease and avenues of research.

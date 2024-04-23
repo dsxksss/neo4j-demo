@@ -1,0 +1,18 @@
+1. Treatment
+Relations: Treated, Inhibit, Therapeutic, Received, Determine, Reduces
+These triples highlight the multiple approaches to treating AD, including the inhibition of acetylcholinesterase and butyrylcholinesterase, and the use of specific drugs such as galantamine and rivastigmine. The treatment of AD by reducing amyloid was also mentioned.
+2. Disease mechanisms and biomarkers
+Relationships: Containing, Combined, Including, Suggests, Related, Correlated, Activated, Hippocampal, Demonstrated
+Triples in this category explore the biological mechanisms and features of AD, It includes multiple aspects related to pathology, suggests cholesterol as a potential factor, related glycosylation, and hippocampal pathology pathology) and activated microglia.
+3. Research approach
+Relationships: Through, Using, Scrutinised, Examined, Mouse models
+Methods and approaches to AD research are described, including through observation, using transfer, scrutinised brain, research in mouse models, And specific drugs (examined galantamine).
+4. Prevention and risk management
+Relations: Vaccine, Against, Preventing, Alternative
+The importance of AD prevention is highlighted, including the development of vaccines against AD, the use of antioxidants (preventing with antioxidants), and the exploration of alternative treatments (alternative against Alzheimer's disease).
+5. The relationship between AD and other diseases
+Relation: As, Caused, Arthritis, Diabetes, Without
+These triples explore the links between AD and other diseases, Such as comparison with schizophrenia (as schizophrenia), caused encephalitis (caused encephalitis), and association with arthritis and diabetes (arthritis, diabetes with Alzheimer's disease).
+6. Social awareness and scientific concern
+Relations: Gaining, Increasing, During, navigating
+It shows that society is gaining recognition and increasing awareness of AD, and highlights that in the process of recognition and research on the diseased brain, The ongoing attention and efforts of the scientific community on AD.

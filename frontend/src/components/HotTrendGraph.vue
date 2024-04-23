@@ -35,7 +35,7 @@ async function handleClickTabpane(name, _ = null) {
         <el-row class="tac">
             <el-col :span="4">
                 <el-menu :default-active="defaultActive" @select="(title, _, __, ___) => handleClickTabpane(title)"
-                    class="w-[200px] z-10 min-h-[92vh]">
+                    class="w-[210px] z-10 min-h-[92vh]">
                     <el-menu-item v-for="dir of dirs" :index="dir">
                         <template #title>{{ dir }}</template>
                     </el-menu-item>

@@ -1,0 +1,15 @@
+1. Biomarkers and Diagnostics
+Relations: screening, including, find, predict, youdaoplaceholder3, youdaoplaceholder3
+Analysis: These triples highlight the importance of biomarkers in AD diagnosis and research. For example, ["Alzheimer's disease", 'screening', 'acetylcholinesterase'] and ["Alzheimer's disease", 'including', 'biomarkers'] reveals methods to diagnose or study AD by screening specific proteins such as ACHE or other biomarkers. ['biomarkers', 'predicting', "Alzheimer's disease"] indicates that biomarkers can predict the development of AD, While ["Alzheimer's disease",'s ', 'biomarkers'] highlights the application of biomarkers in the diagnosis of AD.
+2. Genetic and molecular mechanisms
+Relations: regulate, modifies, caused, associated, interacts
+Analysis: The role of the ApoE gene ['ApoE', 'regulate', "Alzheimer's disease"] and how it modifies the risk of AD ['APOE', 'modifies', "Alzheimer's disease"] highlights the importance of genetic factors in AD. Meanwhile, ["Alzheimer's disease", 'caused', 'Presenilin-1'] revealed the role of specific genetic variants such as Presenilin-1 in the development of AD. In addition, ["Alzheimer's disease", 'interacts', 'mitochondria'] explores the interaction between AD and mitochondria, pointing to the key role of mitochondria in AD pathology.
+3. Pathological features
+Relations: affects, showing, characterized, including
+Analysis: How AD affects the brain ["Alzheimer's disease", 'affects', 'brain'] and specific pathological features of the disease, such as ["Alzheimer's disease", 'showing', 'pathology'], It shows the complexity of AD. ["Alzheimer's disease", 'characterized', 'sex'] reveals that sex may be a factor in the pathological features of AD.
+4. Treatment
+Relationships: treating, against, attenuating, treat, ameliorate
+Analysis: These triples discuss multiple treatments for AD. For example, ['drug', 'treating', "Alzheimer's disease"] refers to the use of drug therapy, ['antioxidants', 'managing', "Alzheimer's disease"] highlights the potential role of antioxidants in the management of AD. ["Alzheimer's disease", 'ameliorate', 'activation'] explores strategies to alleviate AD by reducing the inflammatory response.
+5. Research tools and methods
+Relationships: underwent, neuroimaging, Using, examined, discussed
+Analysis: Tools and methods used in AD research, For example, the disease was explored by autopsy ["Alzheimer's disease", 'underwent', 'autopsy'] and neuroimaging ["Alzheimer's disease", 'neuroimaging', 'dataset']. ["Alzheimer's disease", 'Using', 'chromatography'] reflects the application of analytical techniques in the study of AD.

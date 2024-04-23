@@ -119,6 +119,32 @@ router.get('/:pname/:dirname', async (req, res) => {
     }
 });
 
+router.get('/text/:pname/:dirname',async (req,res)=>{
+    try {
+        const commonImageFormats = ['.txt'];
+        const { dirname, pname } = req.params;
+        const fileDir = join(STATICPATH, pname, dirname);
+
+        const files = fs.readdirSync(fileDir);
+        const texts = files
+            .filter(file => {
+                const extension = path.extname(file).toLowerCase();
+                return commonImageFormats.includes(extension);
+            })
+            .map(file => ({
+                name: file.split('.')[0],
+                fullName: file,
+                url: `static/${pname}/${dirname}/${file}`
+            }));
+
+        const textContent = fs.readFileSync(join(STATICPATH, pname, dirname,texts[0].fullName),{encoding: 'utf8'});
+
+        res.status(200).json(createSuccessResponse(textContent, "获取文本信息成功"));
+    } catch (error) {
+        res.status(500).json(createErrorResponse(`获取文本信息失败: ${error.message}`, 500));
+    }
+})
+
 router.get('/:pname', async (req, res) => {
     try {
         const { pname } = req.params;

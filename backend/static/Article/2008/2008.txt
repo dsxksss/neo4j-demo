@@ -1,0 +1,18 @@
+1. Treatments and drugs
+Relation: Treating, Diagnosed, Against, Treat, Moderate, Reduce
+Drugs and treatments play a role in the fight against Alzheimer's disease (AD). For example, drug treatment with butyrylcholinesterase inhibitors (donepezil was diagnosed for AD), caffeine against AD, specific receptors treat AD, galantamine is used for moderate AD, as well as Leptin reduce AD.
+2. Pathological features and biomarkers
+Relationships: Accompanies, Contribute, Involve, Elevated, Relating, Aims, Devastating, Predict, Suggest, Exhibit, Concomitant
+Pathological features and related biomarkers of AD, amyloid accompanies AD, calcium involve in AD, cholesterol influence AD), enzymes, and proteins (such as acetylcholinesterase indicate AD and alpha_synuclein suggest in AD).
+3. Risk factors and impacts
+Relation: Contribute, Relating, Restricting, Predispose
+Risk factors and effects of AD, including adiposity relating to AD, restricting diagnosis of AD, and seizures predispose by AD.
+4. Research focus and progress
+Relationships: Reported, Between, Used, Aims, Demonstrate, Show
+The focus and progress of AD research, Such as isoflurane report (isoflurane reported in AD), neuroendocrine enzyme and the relationship between the AD (neprilysin between AD), the use of mitochondria (mitochondria, informs in AD) and copper study found (copper demonstrate in AD).
+5. The relationship between AD and other diseases
+Relationship: In, Diabetes
+The relationship between AD and other diseases, such as the association with schizophrenia (AD in schizophrenia) and myocardial hypertrophy caused by diabetes (diabetes hypertrophy in AD).
+6. Genetics and molecular mechanisms
+Relationships: Controlling, Confirmed, Related, Polymorphism
+Genetic and molecular mechanisms of AD, including controlling ApoE in AD, confirmed AD by autopsy, and association with specific genetic polymorphisms (polymorphism related to AD).

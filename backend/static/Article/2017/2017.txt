@@ -1,0 +1,15 @@
+1. Comparing research and disease relationships
+Relationship: as, Because, between, including
+Analysis: These triples, such as [['glaucoma', 'as', "Alzheimer's disease"]], [["Alzheimer's disease", 'as', 'schizophrenia"]], The similarities or common features between AD and other diseases such as glaucoma and schizophrenia are explored. Such studies can help reveal underlying common pathological mechanisms and provide clues to therapeutic strategies across diseases.
+2. Treatments and interventions
+Relationship: treat, against, reduce, treated, administered
+Analysis: For example, [['memantine', 'severe', "Alzheimer's disease"]], [['drug', 'against', "Alzheimer's disease"]] indicate drugs and interventions used to treat or alleviate the symptoms of AD. These studies show the main current strategies for the treatment of AD, such as the use of membrane stabilsants, anti-inflammatory drugs, and through the application of specific drugs such as memantine and donepezil.
+Pathological features
+3. Relationship: increased, exert, affected, suggest, contribute, contributes, associated
+Analysis: Pathological features of AD, such as [["Alzheimer's disease", 'increased', 'reticulum']], [["Alzheimer's disease", 'exert', 'toxic"]], Key changes in the progression of the disease were revealed, including increased ER stress, the effects of toxic agents, impaired brain structure and function, and biological and molecular changes during the course of the disease.
+4. Biomarkers and diagnostic tools
+Relation: indicate, detecting, monitor, study
+Analysis: Such as [['biomarkers', 'indicate', "Alzheimer's disease"]], [['neuroimaging', 'database']], It demonstrates the application of biomarkers and advanced diagnostic tools, such as neuroimaging databases, in the early diagnosis and monitoring of disease progression in AD. These studies highlight the importance of early identification and intervention.
+5. Comorbidity relationship between AD and other diseases
+Relations: diabetes, obesity, epilepsy, leukemia
+Analysis: Comorbidity of AD with other conditions such as diabetes, obesity, epilepsy, Such as [["Alzheimer's disease", 'diabetes', 'hypertension']], [["Alzheimer's disease", 'linked', 'epilepsy"]], This study reveals a variety of health problems that may exist in AD patients, which is of great significance for the management of the disease and the development of treatment strategies.

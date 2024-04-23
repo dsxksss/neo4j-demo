@@ -1,0 +1,18 @@
+1. Treatments and drugs
+Relationship: Anticipated, Treat, Against, With, Treating, Against, Treat, Proposed
+anticipated drugs, drugs treat AD, drugs and methods against AD (ligands, immunotherapy, transplantation, vaccines, curcumin, berberine, edaravone against AD), and the use of specific drugs such as the utilization of rivastigmine (with rivastigmine) and proposed antioxidants (proposed antioxidants).
+2. Pathological features and biomarkers
+Relations: Characterized, Including, Indicate, Related, Revealed
+AD features and biomarkers, including characterized microglia, including microglia, indicate estradiol, related pathology, and revealed genes.
+3. Scientific research and progress
+Relationships: Promote, Demonstrates, Using, Assessed, Differentiated, Increased, Allowed, In
+Scientific research and development, including mitochondrial (mitochondria promote AD), the anesthetic (isoflurane promote AD), the effect of the use of calcium (Using calcium), and the evaluation of caffeine (assessed caffeine).
+3. The relationship between AD and other diseases
+Relation: Reduced, Induced, Conflicting
+The relationship between AD and other diseases, such as reduced schizophrenia, induced by scopolamine, and conflicting obesity data.
+4. Risk factors and impacts
+Relation: Impair, Showed, Acquired, Predicted
+Risk factors and effects of AD include impair metacognition, showed activation, acquired aphasia, and predicted retention.
+5. Lifestyle factors and interventions
+Relations: Against, Treating, Against, Against, Increased, Allowed
+Lifestyle factors and interventions such as increased music, allowed music.
